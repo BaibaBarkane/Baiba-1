@@ -1,56 +1,3 @@
-
- 
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@BaibaBarkane 
-JevgenijVoronov
-/
-Frontend_7k_3gr
-Public
- Watch 1 
-Fork 1
- Star 1
-Code
-Issues
-Pull requests
-2
-Actions
-Projects
-Wiki
-Security
-Insights
-Edit
- Code
-My HTML FORM #24
- Open
-JevgenijVoronov wants to merge 2 commits into main from Branch-for-HTML-Form
-+66 −0 
- Conversation 0
- Commits 2
- Checks 0
- Files changed 1
- Open
-My HTML FORM
-#24
-Changes from 1 commit 
-File filter  
-Conversations 
-Jump to 
- 
-Review changes 
- Prev Next 
-My HTML FORM
- Branch-for-HTML-Form (#24)
-@Anvar331
-Anvar331 committed yesterday
-commit 3fccf4ab7b8be78be9afe1187f6334a04296158c
- 66  
-majasdarbi/01-into/AnvarsIntezars/form.html
- 
-@@ -0,0 +1,66 @@
  <!DOCTYPE html>
  <html>
 
@@ -116,17 +63,5 @@ majasdarbi/01-into/AnvarsIntezars/form.html
      </form>
  </tr>
  </body>
+ </html>
 
-© 2022 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-Loading complete

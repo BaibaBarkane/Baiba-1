@@ -46,7 +46,7 @@
     <main>
         <!-- ABOUT ME -->
         <section id="aboutme">
-            <img src="" alt="" width="100px" height="100px"></br>
+            <img src="images/tartins.jpg" alt="putns" style="width:300px"></br>
             <address>
                 <h1>Kontaktinformācija</h1>
                 <p>e-pasts:baiba.barkane@gmail.com</p>
@@ -88,7 +88,7 @@
                   <td>Latvijas universitāte FM fakultāte</td>
                 </tr>
                 <tr>
-                  <td>Rīgas 7. vidusskola></td>
+                  <td>Rīgas 7. vidusskola</td>
                 </tr>
               </table>
         </section>

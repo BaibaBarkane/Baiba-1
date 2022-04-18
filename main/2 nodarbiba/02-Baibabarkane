@@ -23,7 +23,6 @@
 
         <style>
             h1 {
-                text-align: center;
                 background-color: lightgray;
                 font-family: verdana;
                 font-size: 15px

@@ -22,7 +22,7 @@
         <section id="aboutme">
             <img src="" alt="" width="100px" height="100px">
             <address>
-                <b> style="<background-color:gray>;">Kontaktinformācija</b>
+                <p<b> style="<background-color:gray>;">Kontaktinformācija</b></p></br>
                 <p>e-pasts:baiba.barkane@gmail.com</p>
             </address>
         </section>

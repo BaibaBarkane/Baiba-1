@@ -22,7 +22,7 @@
         <section id="aboutme">
             <img src="" alt="" width="100px" height="100px">
             <address>
-                <h1 style="background-color:lightgray;">Kontaktinformācija</h1>
+                <h2 style="background-color:lightgray;font-family:verdana;">Kontaktinformācija</h2>
                 <p>e-pasts:baiba.barkane@gmail.com</p>
             </address>
         </section>
@@ -42,11 +42,11 @@
                   <td>2021.–</td>
                 </tr>
                 <tr>
-                  <td>Žurnāls<i>Sports</i></td>
+                  <td>Žurnāls <i>Sports</i></td>
                   <td>2006.–2021.</td>
                 </tr>
                 <tr>
-                  <td>Laikraksts<i>Sports</i></td>
+                  <td>Laikraksts <i>Sports</i></td>
                   <td>1991.–2005.</td>
                 </tr>
               </table>

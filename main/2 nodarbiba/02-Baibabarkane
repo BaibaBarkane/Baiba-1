@@ -13,6 +13,7 @@
         
         th, td {
           text-align: left;
+          font-family: Verdana;
           padding: 6px;
         }
         
@@ -24,8 +25,10 @@
         <style>
             h1 {
                 background-color: lightgray;
-                font-family: verdana;
-                font-size: 15px
+                font-size: 15px;
+            }
+            body {
+                font-family: Verdana;
             }
          </style>
     <!--link rel="stylesheet" href="./css/style.css">-->
@@ -79,28 +82,28 @@
         <hr>
         <!-- EDUCATION -->
         <section id="education">
-            <h1 style="font-family:verdana;font-size:15px;">Izglītība</h1>
+            <h1>Izglītība</h1>
         </section>
         <!-- EDUCATION -->
 
         <hr>
         <!-- SKILLS -->
         <section id="skills">
-            <h1 style="background-color:lightgray;font-family:verdana;font-size:15px;">Prasmes</h1>
+            <h1>Prasmes</h1>
         </section>
         <!-- SKIllS -->
 
         <hr>
         <!-- LANGUAGES -->
         <section id="languages">
-            <h1 style="background-color:lightgray;font-family:verdana;font-size:15px;">Valodas</h1>
+            <h1>Valodas</h1>
         </section>
         <!-- LANGUAGES -->
 
         <hr>
         <!-- CONTACT FORM -->
         <section id="contactme">
-            <h1 style="background-color:lightgray;font-family:verdana;font-size:15px;">Saziņai</h1>
+            <h1>>Saziņai</h1>
 
             <form>
                             

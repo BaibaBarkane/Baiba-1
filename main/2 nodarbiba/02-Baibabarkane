@@ -8,16 +8,16 @@
     <style>
         table {
           border-collapse: collapse;
-          width: 100%;
+          width: 50%;
         }
         
         th, td {
           text-align: left;
-          padding: 8px;
+          padding: 6px;
         }
         
         tr:nth-child(even) {
-          background-color: #abc4c4;
+          background-color: #dfe6e6;
         }
         </style>
     <!--link rel="stylesheet" href="./css/style.css">-->

@@ -22,7 +22,7 @@
         <section id="aboutme">
             <img src="" alt="" width="100px" height="100px">
             <address>
-                <h1 style="background-color:lightgray;font-family:verdana;font-size:20px;">Kontaktinformācija</h1>
+                <h1 style="background-color:lightgray;font-family:verdana;font-size:10px;">Kontaktinformācija</h1>
                 <p>e-pasts:baiba.barkane@gmail.com</p>
             </address>
         </section>
@@ -31,7 +31,7 @@
         <hr>
         <!-- WORK EXPERIENCE -->
         <section id="work-experience">
-            <h1 style="background-color:lightgray;">Darba pieredze</h1>
+            <h1 style="background-color:lightgray;font-family:verdana;font-size:10px;">Darba pieredze</h1>
             <table>
                 <tr>
                   <th>Darbavieta</th>
@@ -56,28 +56,28 @@
         <hr>
         <!-- EDUCATION -->
         <section id="education">
-            <h1 style="background-color:lightgray;">Izglītība</h1>
+            <h1 style="background-color:lightgray;font-family:verdana;font-size:10px;">Izglītība</h1>
         </section>
         <!-- EDUCATION -->
 
         <hr>
         <!-- SKILLS -->
         <section id="skills">
-            <h1 style="background-color:lightgray;">Prasmes</h1>
+            <h1 style="background-color:lightgray;font-family:verdana;font-size:10px;">Prasmes</h1>
         </section>
         <!-- SKIllS -->
 
         <hr>
         <!-- LANGUAGES -->
         <section id="languages">
-            <h1 style="background-color:lightgray;">Valodas</h1>
+            <h1 style="background-color:lightgray;font-family:verdana;font-size:10px;">Valodas</h1>
         </section>
         <!-- LANGUAGES -->
 
         <hr>
         <!-- CONTACT FORM -->
         <section id="contactme">
-            <h1 style="background-color:lightgray;">Saziņai</h1>
+            <h1 style="background-color:lightgray;font-family:verdana;font-size:10px;">Saziņai</h1>
 
             <form>
                             

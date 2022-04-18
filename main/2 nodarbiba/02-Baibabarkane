@@ -22,7 +22,7 @@
         <section id="aboutme">
             <img src="" alt="" width="100px" height="100px">
             <address>
-                <h1>Kontaktinformācija</h1>
+                <b> style="<background-color:gray>;">Kontaktinformācija</b>
                 <p>e-pasts:baiba.barkane@gmail.com</p>
             </address>
         </section>
@@ -31,7 +31,7 @@
         <hr>
         <!-- WORK EXPERIENCE -->
         <section id="work-experience">
-            <h2>Darba pieredze</h2>
+            <b> style="<background-color:gray>;">Darba pieredze</b>
             <table>
                 <tr>
                   <th>Darbavieta</th>
@@ -42,27 +42,12 @@
                   <td>2021.–</td>
                 </tr>
                 <tr>
-                  <td>Žurnāls <p><i>Sports</i></p></td>
+                  <td>Žurnāls<p><i>Sports</i></p></td>
                   <td>2006.–2021.</td>
                 </tr>
                 <tr>
-                  <td>Laikraksts <p><i>Sports</i></p></td>
+                  <td>Laikraksts<p><i>Sports</i></p></td>
                   <td>1991.–2005.</td>
-                </tr>
-                <tr>
-                  <td>Island Trading</td>
-                  <td>Helen Bennett</td>
-                  <td>UK</td>
-                </tr>
-                <tr>
-                  <td>Laughing Bacchus Winecellars</td>
-                  <td>Yoshi Tannamuri</td>
-                  <td>Canada</td>
-                </tr>
-                <tr>
-                  <td>Magazzini Alimentari Riuniti</td>
-                  <td>Giovanni Rovelli</td>
-                  <td>Italy</td>
                 </tr>
               </table>
         </section>
@@ -71,38 +56,28 @@
         <hr>
         <!-- EDUCATION -->
         <section id="education">
-            <h2>Education</h2>
+            <b> style="<background-color:gray>;">Izglītība</b>
         </section>
         <!-- EDUCATION -->
 
         <hr>
         <!-- SKILLS -->
         <section id="skills">
-            <h2>Skills</h2>
+            <b> style="<background-color:gray>;">Prasmes</b>
         </section>
         <!-- SKIllS -->
 
         <hr>
-        <!-- FAQ -->
-        <section id="faq">
-            <h2>FAQ</h2>
-            <details>
-                <summary></summary>
-            </details>
-        </section>
-        <!-- LANGUAGES -->
-
-        <hr>
         <!-- LANGUAGES -->
         <section id="languages">
-            <h2>Languages</h2>
+            <b> style="<background-color:gray>;"Valodas</b>
         </section>
         <!-- LANGUAGES -->
 
         <hr>
         <!-- CONTACT FORM -->
         <section id="contactme">
-            <h2>Contact me </h2>
+            <b> style="<background-color:gray>;"Saziņai</b>
 
             <form>
                             

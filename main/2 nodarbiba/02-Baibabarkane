@@ -5,7 +5,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width,initial-scale=1.0"> 
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./css/style.css">
+    <!--link rel="stylesheet" href="./css/style.css">-->
 </head>
 <body>
     <header>
@@ -31,7 +31,7 @@
         <hr>
         <!-- WORK EXPERIENCE -->
         <section id="work-experience">
-            <b> style="<background-color:gray>;">Darba pieredze</b>
+            <h1 style="background-color:lightgray;">Darba pieredze</h1>
             <table>
                 <tr>
                   <th>Darbavieta</th>
@@ -42,11 +42,11 @@
                   <td>2021.–</td>
                 </tr>
                 <tr>
-                  <td>Žurnāls<p><i>Sports</i></p></td>
+                  <td>Žurnāls<i>Sports</i></td>
                   <td>2006.–2021.</td>
                 </tr>
                 <tr>
-                  <td>Laikraksts<p><i>Sports</i></p></td>
+                  <td>Laikraksts<i>Sports</i></td>
                   <td>1991.–2005.</td>
                 </tr>
               </table>
@@ -56,28 +56,28 @@
         <hr>
         <!-- EDUCATION -->
         <section id="education">
-            <b> style="<background-color:gray>;">Izglītība</b>
+            <h1 style="background-color:lightgray;">Izglītība</h1>
         </section>
         <!-- EDUCATION -->
 
         <hr>
         <!-- SKILLS -->
         <section id="skills">
-            <b> style="<background-color:gray>;">Prasmes</b>
+            <h1 style="background-color:lightgray;">Prasmes</h1>
         </section>
         <!-- SKIllS -->
 
         <hr>
         <!-- LANGUAGES -->
         <section id="languages">
-            <b> style="<background-color:gray>;"Valodas</b>
+            <h1 style="background-color:lightgray;">Valodas</h1>
         </section>
         <!-- LANGUAGES -->
 
         <hr>
         <!-- CONTACT FORM -->
         <section id="contactme">
-            <b> style="<background-color:gray>;"Saziņai</b>
+            <h1 style="background-color:lightgray;">Saziņai</h1>
 
             <form>
                             

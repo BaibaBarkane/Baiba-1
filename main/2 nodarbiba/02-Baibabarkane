@@ -5,6 +5,21 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width,initial-scale=1.0"> 
     <meta charset="UTF-8">
+    <style>
+        table {
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        th, td {
+          text-align: left;
+          padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+          background-color: #abc4c4;
+        }
+        </style>
     <!--link rel="stylesheet" href="./css/style.css">-->
 </head>
 <body>
@@ -20,7 +35,7 @@
     <main>
         <!-- ABOUT ME -->
         <section id="aboutme">
-            <img src="" alt="" width="100px" height="100px">
+            <img src="" alt="" width="100px" height="100px"></br>
             <address>
                 <h1 style="background-color:lightgray;font-family:verdana;font-size:15px;">Kontaktinformācija</h1>
                 <p>e-pasts:baiba.barkane@gmail.com</p>
@@ -35,7 +50,7 @@
             <table>
                 <tr>
                   <th>Darbavieta</th>
-                  <th>Laiks</th>
+                  <th></th>
                 </tr>
                 <tr>
                   <td>SIA enivo</td>

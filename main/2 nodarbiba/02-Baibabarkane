@@ -83,6 +83,14 @@
         <!-- EDUCATION -->
         <section id="education">
             <h1>Izglītība</h1>
+            <table>
+                <tr>
+                  <td>Latvijas universitāte FM fakultāte</td>
+                </tr>
+                <tr>
+                  <td>Rīgas 7. vidusskola></td>
+                </tr>
+              </table>
         </section>
         <!-- EDUCATION -->
 
@@ -103,7 +111,7 @@
         <hr>
         <!-- CONTACT FORM -->
         <section id="contactme">
-            <h1>>Saziņai</h1>
+            <h1>Saziņai</h1>
 
             <form>
                             

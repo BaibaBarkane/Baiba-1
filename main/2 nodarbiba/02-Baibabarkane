@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>J</title>
+    <title>CV Baiba Barkāne</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width,initial-scale=1.0"> 
     <meta charset="UTF-8">
@@ -22,8 +22,8 @@
         <section id="aboutme">
             <img src="" alt="" width="100px" height="100px">
             <address>
-                <h1>Kontakt informacija</h1>
-                
+                <h1>Kontaktinformācija</h1>
+                <p>e-pasts:baiba.barkane@gmail.com</p>
             </address>
         </section>
         <!-- /ABOUT ME -->
@@ -31,7 +31,40 @@
         <hr>
         <!-- WORK EXPERIENCE -->
         <section id="work-experience">
-            <h2>Work experience</h2>
+            <h2>Darba pieredze</h2>
+            <table>
+                <tr>
+                  <th>Darbavieta</th>
+                  <th>Laiks</th>
+                </tr>
+                <tr>
+                  <td>SIA enivo</td>
+                  <td>2021.–</td>
+                </tr>
+                <tr>
+                  <td>Žurnāls <p><i>Sports</i></p></td>
+                  <td>2006.–2021.</td>
+                </tr>
+                <tr>
+                  <td>Laikraksts <p><i>Sports</i></p></td>
+                  <td>1991.–2005.</td>
+                </tr>
+                <tr>
+                  <td>Island Trading</td>
+                  <td>Helen Bennett</td>
+                  <td>UK</td>
+                </tr>
+                <tr>
+                  <td>Laughing Bacchus Winecellars</td>
+                  <td>Yoshi Tannamuri</td>
+                  <td>Canada</td>
+                </tr>
+                <tr>
+                  <td>Magazzini Alimentari Riuniti</td>
+                  <td>Giovanni Rovelli</td>
+                  <td>Italy</td>
+                </tr>
+              </table>
         </section>
         <!-- /WORK EXPERIENCE -->
 

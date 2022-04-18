@@ -20,6 +20,12 @@
           background-color: #dfe6e6;
         }
         </style>
+
+        <style>
+            h1 {
+                text-align: center;
+            }
+         </style>
     <!--link rel="stylesheet" href="./css/style.css">-->
 </head>
 <body>

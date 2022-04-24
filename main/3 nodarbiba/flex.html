@@ -7,18 +7,16 @@
         .flex-container {
             display: flex;
             height: 600px;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
             background-color: darkgray;
         }
         .flex-container > div {
             background-color: lightgray;
+            width: 100px;
             text-align: upper-left;
             margin: 10px;
             padding: 20px;
-            font-size: 30px;
-        }
-        .item {
-            align-self: auto | flex-start | strech | center | baseline | flex-end
+            font-size: 20px;
         }
     </style>
 </head>
@@ -31,9 +29,9 @@
           <div>2</div>
           <div>3</div>
           <div>4</div>
-          <div>5</div>
-          <div>6</div>
-          <div>7</div>
+          <div> style="align-self: flex-end">5</div>
+          <div> style="align-self: flex-end">6</div>
+          <div> style="align-self: flex-end">7</div>
         </div>
         <hr>
     </div> -->

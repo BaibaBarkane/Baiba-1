@@ -6,6 +6,36 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0"> 
     <meta charset="UTF-8">
     <style>
+      body {margin:0;}
+      ul {
+         list-style-type: none;
+         margin: 0;
+         padding: 0;
+         overflow: hidden;
+         background-color: rgb(87, 83, 83);
+         position: fixed;
+         top: 0;
+         width: 100%;
+        }
+        li {
+           float: left;
+          }
+        
+      li a {
+         display: block;
+         color: white;
+         text-align: center;
+         padding: 14px 16px;
+         text-decoration: none;
+        }
+
+li a:hover:not(.active) {
+  background-color: rgb(39, 83, 127);
+}
+
+.active {
+  background-color: #1f4189c5;
+}
         table {
           border-collapse: collapse;
           width: 50%;
@@ -37,7 +67,13 @@
     <header>
         <nav>
             <ul>
-                <li><a href="">MenuItem1</a></li>
+                <li><a href="#aboutme">Par mani</a></li>
+                <li><a href="#work-experience">Darba pieredze</a></li>
+                <li><a href="#education">Izglītība</a></li>
+                <li><a href="#skills">Prasmes</a></li>
+                <li><a href="#languages">Valodas</a></li>
+                <li><a href="#contactme">Saziņai</a></li>
+                </ul>
 
             </ul>
         </nav>

@@ -7,9 +7,10 @@
         .flex-container {
             display: flex;
             height: 600px;
-            flex-wrap: nowrap;
             background-color: darkgray;
-            justify-content: space-around;
+            flex-wrap: wrap;
+            align-content: space-between;
+            overflow: scroll;
         }
         .flex-container > div {
             background-color: lightgray;
@@ -23,8 +24,6 @@
 </head>
 <body>
     <!--CSS FlexBox-->
-
-
         <div class="flex-container">
           <div>1</div>
           <div>2</div>

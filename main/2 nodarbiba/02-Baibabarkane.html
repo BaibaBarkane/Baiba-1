@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0"> 
     <meta charset="UTF-8">
     <style>
-      body {margin:0;}
+      body {margin:0; 
+           background-color: 
+           rgb(6, 87, 113);
+           }
       ul {
          list-style-type: none;
          margin: 0;
@@ -28,25 +31,25 @@
          padding: 14px 16px;
          text-decoration: none;
         }
+        li a:hover:not(.active) {
+          background-color: rgb(39, 83, 127);
+        }
 
-li a:hover:not(.active) {
-  background-color: rgb(39, 83, 127);
-}
+        .active {
+          background-color: #1f4189c5;
+        }
 
-.active {
-  background-color: #1f4189c5;
-}
         table {
           border-collapse: collapse;
           width: 50%;
         }
-        
+
         th, td {
           text-align: left;
           font-family: Verdana;
           padding: 6px;
         }
-        
+
         tr:nth-child(even) {
           background-color: #dfe6e6;
         }
@@ -56,6 +59,7 @@ li a:hover:not(.active) {
             h1 {
               text-align: center;
               font-size: 20px;
+              text-transform: uppercase
             }
             body {
                 font-family: Verdana;

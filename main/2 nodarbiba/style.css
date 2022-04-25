@@ -19,7 +19,7 @@ table {
 th,
 td {
   text-align: left;
-  padding: 6px;
+  padding: 4px;
 }
 
 tr:nth-child(even) {

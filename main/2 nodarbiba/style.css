@@ -9,10 +9,10 @@ h1 {
   line-height: 30px;
 }
 body {
-  margin: 20px;
   font-family: "IBM Plex Mono", monospace;
 }
 table {
+  margin: 20px;
   border-collapse: collapse;
   width: 50%;
 }

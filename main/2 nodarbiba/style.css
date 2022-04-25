@@ -12,6 +12,7 @@ body {
   font-family: "IBM Plex Mono", monospace;
 }
 table {
+  margin: 70px;
   border-collapse: collapse;
   width: 50%;
 }
@@ -19,7 +20,7 @@ table {
 th,
 td {
   text-align: left;
-  padding: 4px;
+  padding: 3px;
 }
 
 tr:nth-child(even) {

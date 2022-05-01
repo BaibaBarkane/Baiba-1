@@ -9,8 +9,13 @@ h1 {
   line-height: 30px;
 }
 body {
-  margin: 20px;
+  background-color: rgb(165, 169, 171);
   font-family: "IBM Plex Mono", monospace;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 table {
   margin: 20px;

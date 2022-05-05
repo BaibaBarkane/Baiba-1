@@ -44,7 +44,11 @@ nav {
           display: flex;
            flex-direction: row;
           }
-
+          @media (max-width: 800px) {
+  .container {
+    flex-direction: column;
+  }
+}
         ul li {
       	flex-grow: 1;
         }

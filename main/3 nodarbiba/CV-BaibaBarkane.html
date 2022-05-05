@@ -19,23 +19,24 @@
     flex-direction: column;
   }
 }
+nav {
+  background-color: rgb(87, 83, 83);
+  border-right: none;
+  width: 100%;
+  margin-bottom: 20px;
+}
       
-      ul {
+      nav ul {
          list-style-type: none;
-         box-sizing: border-box;
          margin: 0;
          padding: 0;
          overflow: hidden;
-         background-color: rgb(87, 83, 83);
          position: fixed;
          top: 0;
          width: 100%;
         }
                
-        li a {
-          display: flex;
-         justify-content: space-evenly;
-        align-items: center;
+        nav ul li a {
          color: white;
          text-align: center;
          padding: 14px 16px;
@@ -48,6 +49,14 @@
         .active {
           background-color: #1f4189c5;
         }
+        ul {
+  display: flex;
+  flex-direction: row;
+}
+
+ul li {
+	flex-grow: 1;
+}
 
         ul.b {
           list-style-type: square;

@@ -13,8 +13,12 @@
 .flex-container {
          display: flex;
          flex-direction: row;
-         align-items: center;
         }
+        @media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
       
       ul {
          list-style-type: none;
@@ -28,6 +32,9 @@
         }
                
         li a {
+          display: flex;
+         justify-content: space-evenly;
+        align-items: center;
          color: white;
          text-align: center;
          padding: 14px 16px;

@@ -10,15 +10,6 @@
     <ul class="flex-container"></ul>
     <style>
 
-.flex-container {
-         display: flex;
-         flex-direction: row;
-        }
-        @media (max-width: 800px) {
-  .flex-container {
-    flex-direction: column;
-  }
-}
 nav {
   border-right: none;
   width: 100%;
@@ -56,6 +47,11 @@ nav {
 
 ul li {
 	flex-grow: 1;
+}
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+  }
 }
 
         ul.b {

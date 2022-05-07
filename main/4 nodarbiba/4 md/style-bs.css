@@ -1,5 +1,5 @@
 .row {
-  height: 100px;
+  height: 70px;
 }
 #red {
   background-color: red;
@@ -15,6 +15,6 @@
   .row {
     display: flex;
     flex-direction: column;
-    height: 300px;
+    height: 210px;
   }
 }

@@ -21,7 +21,16 @@ body {
 }
 
 @media only screen and (min-width: 576px) {
-  .col1-sm-7 {
+  .col1 {
+    background-color: red;
+    width: 100%;
+  }
+  .col2 {
+    background-color: yellow;
+    width: 100%;
+  }
+  .col3 {
+    background-color: green;
     width: 100%;
   }
 }

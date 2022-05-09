@@ -13,7 +13,7 @@
   background-color: green;
   width: 33.3%;
 }
-.container {
+.row {
   display: flex;
   flex-direction: row;
 }

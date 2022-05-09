@@ -6,11 +6,9 @@
 }
 .col2 {
   background-color: yellow;
-  width: 100%;
 }
 .col3 {
   background-color: green;
-  width: 100%;
 }
 
 @media only screen and (max-width: 576px) {

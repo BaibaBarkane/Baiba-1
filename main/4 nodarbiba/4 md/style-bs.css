@@ -1,13 +1,13 @@
 .row {
   height: 140px;
 }
-#red {
+.col-1 {
   background-color: red;
 }
-#yellow {
+.col-2 {
   background-color: yellow;
 }
-#green {
+.col-3 {
   background-color: green;
 }
 

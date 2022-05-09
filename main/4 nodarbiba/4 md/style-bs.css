@@ -1,18 +1,26 @@
+.container {
+  display: flex;
+  height: 100%;
+}
+.row {
+  height: 140px;
+}
 .col1 {
   background-color: red;
+  width: 33.33%;
 }
 .col2 {
   background-color: yellow;
+  width: 33.33%;
 }
 .col3 {
   background-color: green;
+  width: 33.33%;
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (min-width: 576px) {
   .row {
     display: flex;
-  }
-  .col1 .col2 .col3 {
-    width: 33.33%;
+    flex-direction: column;
   }
 }

@@ -7,7 +7,7 @@ body {
   display: flex;
   height: 10vh;
 }
-.col1 {
+.col1-sm-7 {
   background-color: red;
   width: 33.33%;
 }

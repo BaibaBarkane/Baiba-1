@@ -3,19 +3,15 @@
 }
 .col1 {
   background-color: red;
-  width: 33.3%;
+  width: 33.33%;
 }
 .col2 {
   background-color: yellow;
-  width: 33.3%;
+  width: 33.33%;
 }
 .col3 {
   background-color: green;
-  width: 33.3%;
-}
-.row {
-  display: flex;
-  flex-direction: row;
+  width: 33.33%;
 }
 
 @media only screen and (min-width: 576px) {

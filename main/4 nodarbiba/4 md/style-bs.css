@@ -1,21 +1,19 @@
 .row {
   height: 100px;
 }
-.col1 {
+#red {
   background-color: red;
-  width: 33.33%;
 }
-.col2 {
+#yellow {
   background-color: yellow;
-  width: 33.33%;
 }
-.col3 {
+#green {
   background-color: green;
-  width: 33.33%;
 }
 
 @media only screen and (max-width: 576px) {
   .row {
+    display: flex;
     width: 100%;
   }
 }

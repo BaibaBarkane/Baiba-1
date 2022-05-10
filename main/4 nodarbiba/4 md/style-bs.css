@@ -1,6 +1,3 @@
-.row {
-  height: 100px;
-}
 .col1 {
   background-color: red;
 }
@@ -12,9 +9,8 @@
 }
 
 @media only screen and (max-width: 576px) {
-  .row {
-    display: flex;
-    flex-direction: column;
-    height: 300px;
+  .col1 .col2 .col3 {
+    float: none;
+    width: 100%;
   }
 }

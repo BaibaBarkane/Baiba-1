@@ -10,7 +10,7 @@ String(false); //false
 String(function () {}); //function () {}
 String({}); //{}
 String({ key: 42 });
-String([]);
+String([]); //
 String([1, 2]); //1,2
 
 Number("123"); //123
@@ -40,4 +40,4 @@ Boolean(function () {});
 Boolean({}); //true
 Boolean({ key: 42 });
 Boolean([]); //true
-Boolean([1, 2]);
+Boolean([1, 2]); //true

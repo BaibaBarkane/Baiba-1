@@ -31,7 +31,7 @@ nav ul li a {
   text-decoration: none;
 }
 li a:hover:not(.active) {
-  color: rgb(132, 134, 137);
+  color: rgb(154, 157, 162);
 }
 
 .active {

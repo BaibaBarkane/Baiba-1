@@ -1,9 +1,9 @@
 <div class="container">
-<div class="row">
-<div class="col-12">
-    <h3>Heading 4</h3>
-</div>
-</div>
+    <div class="row">
+        <div class="col-12">
+            <h3>Heading 4</h3>
+        </div>
+    </div>
 
     <div class="row">
         <div class="col-4">
@@ -32,9 +32,11 @@
     </div>
 
     <div class="row">
-    <div class="col-12">
-        <h3>Heading 4</h3>
-        <p>This is the second row with three equal columns.</p>
+        <div class="col-12">
+           <h3>Heading 4</h3>
+           <p>This is the second row with three equal columns.</p>
+        </div>
     </div>
-    </div>
+
 </div>
+    

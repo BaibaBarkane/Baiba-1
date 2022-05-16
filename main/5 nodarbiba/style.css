@@ -2,6 +2,16 @@
 @import "./bs.css";
 @import "./img.css";
 
+.div1 {
+  display: flex;
+  float: left;
+  border-radius: 10px;
+  background: rgb(20, 105, 155);
+  padding: 15px;
+  width: 38%;
+  margin: 1vw;
+}
+
 h1 {
   text-align: center;
   writing-mode: vertical-lr;
@@ -10,7 +20,6 @@ h1 {
   font-weight: normal;
   color: white;
   text-transform: uppercase;
-  background-color: rgb(92, 93, 95);
   line-height: 30px;
 }
 h2 {
@@ -21,8 +30,17 @@ h2 {
   color: white;
   text-transform: uppercase;
 }
+
+h3 {
+  text-align: center;
+  font-family: "Karla", sans-serif;
+  font-size: 35px;
+  font-weight: normal;
+  color: rgb(20, 105, 155);
+}
+
 body {
-  background-color: rgb(165, 169, 171);
+  background-color: rgb(239, 240, 240);
   font-family: "IBM Plex Mono", monospace;
 }
 
@@ -39,5 +57,5 @@ td {
 }
 
 tr:nth-child(even) {
-  background-color: #dfe6e6;
+  background-color: rgb(239, 240, 240);
 }

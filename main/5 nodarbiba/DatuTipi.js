@@ -7,9 +7,9 @@ String(null); //null
 String(undefined); //undefined
 String(true); //true
 String(false); //false
-String(function () {}); //function () {}
-String({}); //{}
-String({ key: 42 });
+String(function () {}); //"function () {}""
+String({}); // "object"
+String({ key: 42 }); // "object"
 String([]); //
 String([1, 2]); //1,2
 
@@ -21,11 +21,11 @@ Number(null); //0
 Number(undefined); //NaN
 Number(true); //1
 Number(false); //0
-Number(function () {});
+Number(function () {}); //Nan
 Number({}); //NaN
 Number([]); //0
 Number([1]); //1
-Number([1, 2]);
+Number([1, 2]); // Nan
 
 Boolean(""); //false
 Boolean("string"); //true
@@ -36,8 +36,8 @@ Boolean(-42); //true
 Boolean(NaN); //false
 Boolean(null); //false
 Boolean(undefined); //false
-Boolean(function () {});
+Boolean(function () {}); //true
 Boolean({}); //true
-Boolean({ key: 42 });
+Boolean({ key: 42 }); //true
 Boolean([]); //true
 Boolean([1, 2]); //true

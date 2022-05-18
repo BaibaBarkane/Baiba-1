@@ -3,6 +3,7 @@
   margin-bottom: 7px;
   float: center;
 }
+
 #pieredze {
   border-radius: 10px;
   background: rgb(225, 172, 96);
@@ -22,7 +23,6 @@
   padding: 15px;
   margin: 10px;
   height: 30vh;
-  min-width: 33.33%;
 }
 
 #izglitiba {

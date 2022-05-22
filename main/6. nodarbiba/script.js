@@ -21,7 +21,7 @@ let arrayId;
 
 // 3) izvejtot mainigo "output" šis mainigas satur DOM elementu kur tiek izvadits izveletais burts(getElementById) 
 
-let output = getElementById;
+let output = document.getElementById;
 /* 4) izvejtot funkciju getValue() funkcijas ipašibas 
         neko nesaņem
         izmantojot prompt() medoti --> https://www.w3schools.com/jsref/met_win_prompt.asp piesaistit vertibu mainigam arrayId
@@ -30,7 +30,7 @@ let output = getElementById;
         ne gadijuma izvadit kļudas paziņojomu pec tam izsaukt funkciju getValue velreizi
         */
 function getValue() {
-        arrayId = prompt("Ievadiet burtu")
+        arrayId = prompt("Ievadiet skaitli no 0 līdz 25");
         if (arrayId = < characters.length) {
                 printValue();
         } else {
@@ -44,6 +44,8 @@ function getValue() {
         neko nesaņem
         izmaiņam defineto output mainigo iekšejo text (innerText) ar izveleto burtu masiva (characters[arrayId])
 */
+
+output.innerText = (characters[arrayId]);
 function printValue() {
         console.log(output);
         

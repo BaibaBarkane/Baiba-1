@@ -45,8 +45,8 @@ let getValue = () => {
   }
 
   /* 5) izvejtot funkciju printValues() funkcijas ipašibas neko nesaņem
-                izmaiņam defineto output mainigo iekšejo text (innerText) ar izveleto burtu masiva (characters[arrayId])
-        */
+        izmaiņam defineto output mainigo iekšejo text (innerText) ar izveleto burtu masiva (characters[arrayId])  */
+
   let printValue = () => {
     output.innerText = characters[arrayId];
     console.log(output);
@@ -58,8 +58,8 @@ let getValue = () => {
 
   /* 7) japievino event listener keyPress un parbaudit ievadito to tastaturas vertibu 
         ar izveleto vertibu pirm tam
-                ja gadijuma izvadit paziņojumu alert('PAREIZI') un izsaukt funkciju getValue() vel reizi
-                ne gadijum izvadit paziņojumu alert('NEPAREIZI')
+        ja gadijuma izvadit paziņojumu alert('PAREIZI') un izsaukt funkciju getValue() vel reizi
+        ne gadijum izvadit paziņojumu alert('NEPAREIZI')
         */
   element.addEventListener("keypress", key);
   if (key == characters[arrayId]) {

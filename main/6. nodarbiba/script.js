@@ -24,7 +24,7 @@ let arrayId=0;
 /* 3) izvejtot mainigo "output" šis mainigas satur DOM elementu 
 kur tiek izvadits izveletais burts(getElementById) */
 
-let output = document.getElementById;
+let output = document.getElementById(input);
 
 /* 4) izvejtot funkciju getValue() funkcijas ipašibas 
         neko nesaņem
@@ -35,39 +35,37 @@ let output = document.getElementById;
         ja gadijuma izsaukt finkciju print value (5 punkts)
         ne gadijuma izvadit kļudas paziņojomu pec tam izsaukt funkciju getValue velreizi
         */
+
 let getValue = () => {
         arrayId = prompt("Ievadiet skaitli no 0 līdz 25");
-        if (arrayId = < characters.length) {
-                printValue;
+        if (arrayId >= 0 && arrayId <= characters.length) {
+                printValue();
         } else {
-alert("Nepareizi");
-getValue;
+                alert("Nepareizi");
+                getValue;
         }
                 
        
-
-/* 5) izvejtot funkciju printValues() funkcijas ipašibas
-        neko nesaņem
-        izmaiņam defineto output mainigo iekšejo text (innerText) ar izveleto burtu masiva (characters[arrayId])
-*/
-
-let printValue=() => {
-        output.innerText = (characters[arrayId]);
-        console.log(output);
-        
-}
-// 6) izsaucam funkciju getValue()
-
-/* 7) japievino event listener keyPress un parbaudit ievadito to tastaturas vertibu 
-ar izveleto vertibu pirm tam
-        ja gadijuma izvadit paziņojumu alert('PAREIZI') un izsaukt funkciju getValue() vel reizi
-        ne gadijum izvadit paziņojumu alert('NEPAREIZI')
-*/      
-element.addEventListener("keypress", (key) => {
-        if (key == characters[arrayId]) {
-                alert("Pareizi");
-                getValue();
-        } else {
-                alert("Nepareizi");
+        /* 5) izvejtot funkciju printValues() funkcijas ipašibas neko nesaņem
+                izmaiņam defineto output mainigo iekšejo text (innerText) ar izveleto burtu masiva (characters[arrayId])
+        */
+        let printValue = () => {
+                output.innerText = (characters[arrayId]);
+                console.log(output);
         }
-}
+        
+        // 6) izsaucam funkciju getValue()
+
+        /* 7) japievino event listener keyPress un parbaudit ievadito to tastaturas vertibu 
+        ar izveleto vertibu pirm tam
+                ja gadijuma izvadit paziņojumu alert('PAREIZI') un izsaukt funkciju getValue() vel reizi
+                ne gadijum izvadit paziņojumu alert('NEPAREIZI')
+        */
+        element.addEventListener("keypress", (key)) => {
+                if (key == characters[arrayId]) {
+                        alert("Pareizi");
+                        getValue();
+                } else {
+                        alert("Nepareizi");
+                }
+        }

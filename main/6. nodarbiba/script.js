@@ -18,12 +18,12 @@ const characters = ["z", "a", "l", "k", "t", "i", "s"];
 
 // 2) izvejtot mainigo "arrayId" šis mainigas saņems lietotaja ievadito skaitli
 
-let arrayId = 0;
+let arrayId = "";
 
 /* 3) izvejtot mainigo "output" šis mainigas satur DOM elementu 
 kur tiek izvadits izveletais burts(getElementById) */
 
-let output = document.getElementById(input);
+const output = document.getElementById("main");
 
 /* 4) izvejtot funkciju getValue() funkcijas ipašibas 
         neko nesaņem
@@ -35,9 +35,46 @@ let output = document.getElementById(input);
         ne gadijuma izvadit kļudas paziņojomu pec tam izsaukt funkciju getValue velreizi
         */
 
+  arrayId = prompt(`Ievadiet skaitli no 0 līdz ${characters.length}`);
+  
 let getValue = () => {
-  arrayId = prompt("Ievadiet skaitli no 0 līdz 25");
-  if (arrayId >= 0 && arrayId <= characters.length) {
+  /* jāpārbauda vai ievadīti derīgi dati */
+  if (arrayId > characters.length || arrayId === "" || arrayId === undefined) {
+    alert(`Skaitlis ${arrayId} neatbilst`);
+    getValue();
+    //kļūda
+  } else {
+    printValue();
+  }
+}
+
+/* vai
+if (arrayId =<AnalyserNode chatacters.length || arrayId !== "") {
+  output.innerHTML = characters[arrayId];
+} else {
+  //kļūda
+} 
+*/
+
+let printValue = () => {
+  output.innerHTML = characters[arrayId];
+}
+
+getValue();
+
+document.addEventListener("keypress", (eventObject) => {
+  if (eventObject.key === characters[arrayId]) {
+    alert(`Pareizi`);
+    getValue();
+  } else {
+    alert(`Nepareizi`);
+  }
+  console.log(eventObject);
+});
+
+
+
+  if (arrayId >= 0 && arrayId <= characters.length - 1) {
     printValue();
   } else {
     alert("Nepareizi");

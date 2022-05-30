@@ -2,6 +2,21 @@
 // Nokopejiet šo mapi savas majas darba mape
 // Aplikacijas darbas principi var apskatit video appDemo.mp4
 
+window.onload = () => {
+  addBtn.addEventListener("click", addTask);
+  const addTask = () => {
+    console.log("Task description", taskInput.value);
+    const task = {
+      textTask: tasInput.value,
+      done: false,
+    };
+    taskInput.value = "";
+    taskList.push(task);
+    saveToLocalStorage();
+    renderTask();
+  };
+};
+
 /* Mums nepieciešams izviedot nelielu todo aplikaciju ar iespeju pievienot izdzest un atziment izdarito notikumu
     Mums nepieciešams 4 funkcijas
         addTask() - pievienot notikumu
@@ -37,29 +52,20 @@
                 funkcija toogleDone dara divas darbibas
                 gadijuma ja bija nospiesta izdžešanas poga, mes izdesam elementu no localStorage izsaucam renderTask funkciju lai atjaunto sarakstu
                 gadijuma ja bija nospiest elements mes nomainam elementam done vertibu done: false --> done: true un izsaucam renderTask funkciju lai atjauno sarakstu
-*/          
-const taskAdder = document.querySelector('.taskAdder');
-const myTasks   = document.querySelector('.myTasks');
-const tasks     = JSON.parse(localStorage.getItem('taskList')) || [];
+*/
+const taskAdder = document.querySelector(".taskAdder");
+const myTasks = document.querySelector(".myTasks");
+const tasks = JSON.parse(localStorage.getItem("taskList")) || [];
 
-// addEventListener click 
+// addEventListener click
 // addEventListener submit
-
-
 
 renderTask();
 
-function addTask(){
+function addTask() {}
 
-}
+function saveToLocalStorage() {}
 
-function saveToLocalStorage() {
+function renderTask() {}
 
-}
-
-function renderTask() {
-
-}
-
-function toggleDone(e) {
-}
+function toggleDone(e) {}

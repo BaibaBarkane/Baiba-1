@@ -2,7 +2,6 @@
 // Nokopejiet šo mapi savas majas darba mape
 // Aplikacijas darbas principi var apskatit video appDemo.mp4
 
-// window.onload = () => {
 taskInput = documentGetElementById("taskInput");
 addBtn = documentGetElementById("addBtn");
 taskList = documentGetElementById("taskList");
@@ -23,22 +22,12 @@ const addTask = () => {
   saveToLocalStorage();
   renderTask();
 };
-// };
 
 /* Mums nepieciešams izviedot nelielu todo aplikaciju ar iespeju pievienot izdzest un atziment izdarito notikumu
     Mums nepieciešams 4 funkcijas
         addTask() - pievienot notikumu
-            1 - izveleties inputa vertibu izmantojot selector.value;
-            2 - izveido object priekš notikums 
-                const task = {
-                    textTask,
-                    done: false
-                }
-            3 - izsaukt funkciju saveToLocalStorage
-
         saveToLocalStorage() - saglaba notikumu
-            1 - jaizmanto JSON.stringify
-            2 - jaizmanto atslegst vards 'taskList'
+      
 
         renderTask() - izvada sarakstu notikumu
             1 - jaizmanto innerHTML

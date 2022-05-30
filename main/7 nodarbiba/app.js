@@ -37,20 +37,29 @@
                 funkcija toogleDone dara divas darbibas
                 gadijuma ja bija nospiesta izdžešanas poga, mes izdesam elementu no localStorage izsaucam renderTask funkciju lai atjaunto sarakstu
                 gadijuma ja bija nospiest elements mes nomainam elementam done vertibu done: false --> done: true un izsaucam renderTask funkciju lai atjauno sarakstu
-*/
-const taskAdder = document.querySelector(".taskAdder");
-const myTasks = document.querySelector(".myTasks");
-const tasks = JSON.parse(localStorage.getItem("taskList")) || [];
+*/          
+const taskAdder = document.querySelector('.taskAdder');
+const myTasks   = document.querySelector('.myTasks');
+const tasks     = JSON.parse(localStorage.getItem('taskList')) || [];
 
-// addEventListener click
+// addEventListener click 
 // addEventListener submit
+
+
 
 renderTask();
 
-function addTask() {}
+function addTask(){
 
-function saveToLocalStorage() {}
+}
 
-function renderTask() {}
+function saveToLocalStorage() {
 
-function toggleDone(e) {}
+}
+
+function renderTask() {
+
+}
+
+function toggleDone(e) {
+}

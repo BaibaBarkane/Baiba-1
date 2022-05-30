@@ -2,28 +2,28 @@
 // Nokopejiet šo mapi savas majas darba mape
 // Aplikacijas darbas principi var apskatit video appDemo.mp4
 
-window.onload = () => {
-  taskInput = documentGetElementById("taskInput");
-  addBtn = documentGetElementById("addBtn");
-  taskList = documentGetElementById("taskList");
+// window.onload = () => {
+taskInput = documentGetElementById("taskInput");
+addBtn = documentGetElementById("addBtn");
+taskList = documentGetElementById("taskList");
 
-  const saveToLocalStorage = () => {
-    localStorage.setItem("taskList", JSON.stringify(taskList));
-  };
-
-  addBtn.addEventListener("click", addTask);
-  const addTask = () => {
-    console.log("Task description", taskInput.value);
-    const task = {
-      textTask: taskInput.value,
-      done: false,
-    };
-    taskInput.value = "";
-    taskList.push(task);
-    saveToLocalStorage();
-    renderTask();
-  };
+const saveToLocalStorage = () => {
+  localStorage.setItem("taskList", JSON.stringify(taskList));
 };
+
+addBtn.addEventListener("click", addTask);
+const addTask = () => {
+  console.log("Task description", taskInput.value);
+  const task = {
+    textTask: taskInput.value,
+    done: false,
+  };
+  taskInput.value = "";
+  taskList.push(task);
+  saveToLocalStorage();
+  renderTask();
+};
+// };
 
 /* Mums nepieciešams izviedot nelielu todo aplikaciju ar iespeju pievienot izdzest un atziment izdarito notikumu
     Mums nepieciešams 4 funkcijas

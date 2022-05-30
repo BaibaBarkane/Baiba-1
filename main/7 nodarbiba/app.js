@@ -7,6 +7,10 @@ window.onload = () => {
   addBtn = documentGetElementById("addBtn");
   taskList = documentGetElementById("taskList");
 
+  const saveToLocalStorage = () => {
+    localStorage.setItem("taskList", JSON.stringify(taskList));
+  };
+
   addBtn.addEventListener("click", addTask);
   const addTask = () => {
     console.log("Task description", taskInput.value);

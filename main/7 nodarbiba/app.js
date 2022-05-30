@@ -3,11 +3,15 @@
 // Aplikacijas darbas principi var apskatit video appDemo.mp4
 
 window.onload = () => {
+  taskInput = documentGetElementById("Task input");
+  addBtn = documentGetElementById("addBtn");
+  taskList = documentGetElementById("taskList");
+
   addBtn.addEventListener("click", addTask);
   const addTask = () => {
     console.log("Task description", taskInput.value);
     const task = {
-      textTask: tasInput.value,
+      textTask: taskInput.value,
       done: false,
     };
     taskInput.value = "";

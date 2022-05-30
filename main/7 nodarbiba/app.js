@@ -3,7 +3,7 @@
 // Aplikacijas darbas principi var apskatit video appDemo.mp4
 
 window.onload = () => {
-  taskInput = documentGetElementById("Task input");
+  taskInput = documentGetElementById("taskInput");
   addBtn = documentGetElementById("addBtn");
   taskList = documentGetElementById("taskList");
 

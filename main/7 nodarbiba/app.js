@@ -5,11 +5,11 @@
 let taskAdder;
 let taskList;
 let myTasksContainer;
-let taskInput = document.GetElementById("taskInput");
-let addBtn = document.GetElementById("addBtn");
+let taskInput = document.GetElementById(".taskInput");
+let addBtn = document.GetElementById(".addBtn");
 
 taskAdder = document.querySelector(".taskAdder");
-myTasksContainer = documentGetElementById(".myTasks");
+myTasksContainer = document.GetElementById(".myTasks");
 taskList = JSON.parse(localStorage.getItem("taskList"));
 
 const saveToLocalStorage = () => {

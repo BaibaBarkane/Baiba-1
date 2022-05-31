@@ -5,7 +5,8 @@
 let taskAdder;
 let taskList;
 let myTasksContainer;
-let taskInput = document.querySelector("taskInput");
+let taskInput = document.GetElementById("taskInput");
+let addBtn = document.GetElementById("addBtn");
 
 taskAdder = document.querySelector(".taskAdder");
 myTasksContainer = documentGetElementById(".myTasks");

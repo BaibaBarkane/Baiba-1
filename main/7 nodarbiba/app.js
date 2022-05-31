@@ -5,11 +5,11 @@
 let taskAdder;
 let taskList;
 let myTasksContainer;
-let taskInput = document.GetElementById("taskInput").innerHTML;
-let addBtn = document.GetElementById(".addBtn");
+let taskInput = document.getElementById("taskInput");
+let addBtn = document.getElementById("addBtn");
 
-taskAdder = document.querySelector(".taskAdder");
-myTasksContainer = document.GetElementById(".myTasks");
+taskAdder = document.querySelector("taskAdder");
+myTasksContainer = document.getElementById("myTasks");
 taskList = JSON.parse(localStorage.getItem("taskList"));
 
 const saveToLocalStorage = () => {
@@ -18,7 +18,7 @@ const saveToLocalStorage = () => {
 
 addBtn.addEventListener("click", addTask);
 
-const addTask = () => {
+function addTask() {
   console.log("Task description", taskInput.value);
   const task = {
     textTask: taskInput.value,
@@ -30,7 +30,7 @@ const addTask = () => {
   const renderTask = () => {
     localStorage.removeItem;
   };
-};
+}
 
 const renderTask = () => {
   letTaskToRender = [];

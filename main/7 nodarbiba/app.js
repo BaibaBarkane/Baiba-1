@@ -16,7 +16,7 @@ const saveToLocalStorage = () => {
   localStorage.setItem("taskList", JSON.stringify(taskList));
 };
 
-addBtn.addEventListener("click", addTask);
+addBtn.addEventListener("click", addTask());
 
 function addTask() {
   console.log("Task description", taskInput.value);

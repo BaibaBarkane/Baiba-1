@@ -2,34 +2,30 @@
 // Nokopejiet šo mapi savas majas darba mape
 // Aplikacijas darbas principi var apskatit video appDemo.mp4
 
-let taskAdder;
-let taskList;
-let myTasksContainer;
+let taskList = [];
 let taskInput = document.getElementById("taskInput");
 let addBtn = document.querySelector("Submit");
 
-taskAdder = document.querySelector("taskAdder");
-myTasksContainer = document.getElementById("myTasks");
+let taskAdder = document.querySelector("taskAdder");
+let myTasksContainer = document.getElementById("myTasks");
 taskList = JSON.parse(localStorage.getItem("taskList"));
 
 const saveToLocalStorage = () => {
   localStorage.setItem("taskList", JSON.stringify(taskList));
 };
 
+addBtn.addEventListener("click", taskInput());
+
 function addTask() {
-  console.log("Task description", taskInput.value);
   const task = {
     textTask: taskInput.value,
     done: false,
   };
-  taskInput.value = "";
-  taskList.push(task);
-  saveToLocalStorage();
+  (taskInput.value = ""), taskList.push(task), saveToLocalStorage();
   const renderTask = () => {
     localStorage.removeItem;
   };
 }
-addBtn.addEventListener("click", addTask());
 
 const renderTask = () => {
   letTaskToRender = [];

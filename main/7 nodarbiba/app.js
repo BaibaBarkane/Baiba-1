@@ -6,7 +6,7 @@ let taskAdder;
 let taskList;
 let myTasksContainer;
 let taskInput = document.getElementById("taskInput");
-let addBtn = document.getElementById("addBtn");
+let addBtn = document.querySelector("Submit");
 
 taskAdder = document.querySelector("taskAdder");
 myTasksContainer = document.getElementById("myTasks");
@@ -29,7 +29,7 @@ function addTask() {
     localStorage.removeItem;
   };
 }
-addBtn.addEventListener("submit", addTask());
+addBtn.addEventListener("click", addTask());
 
 const renderTask = () => {
   letTaskToRender = [];

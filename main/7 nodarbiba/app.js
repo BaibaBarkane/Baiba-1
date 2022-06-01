@@ -16,8 +16,6 @@ const saveToLocalStorage = () => {
   localStorage.setItem("taskList", JSON.stringify(taskList));
 };
 
-addBtn.addEventListener("submit", addTask());
-
 function addTask() {
   console.log("Task description", taskInput.value);
   const task = {
@@ -31,6 +29,7 @@ function addTask() {
     localStorage.removeItem;
   };
 }
+addBtn.addEventListener("submit", addTask());
 
 const renderTask = () => {
   letTaskToRender = [];

@@ -3,31 +3,37 @@
 // Aplikacijas darbas principi var apskatit video appDemo.mp4
 
 let taskList = [];
-let taskInput = document.querySelector("taskInput");
-let addBtn = document.querySelector("Submit");
+let addBtn = document.querySelector(".addBtn");
 
 let taskAdder = document.querySelector("taskAdder");
 let myTasksContainer = document.getElementById("myTasks");
 taskList = JSON.parse(localStorage.getItem("taskList"));
 
 const saveToLocalStorage = () => {
-  localStorage.setItem("taskList", JSON.stringify(taskList));
+  localStorage.setItem(".taskList", JSON.stringify(taskList));
 };
 
-addBtn.addEventListener("click", taskInput());
-
-function addTask() {
-  const task = {
-    textTask: taskInput.value,
-    done: false,
-  };
-  (taskInput.value = ""), taskList.push(task), saveToLocalStorage();
-  const renderTask = () => {
-    localStorage.removeItem;
-  };
+addBtn.addEventListener("click", event => {
+    event.preventDefault();
+    let taskInput = document.querySelector(".taskInput");
+    const textTask = taskInput.value.trim();
+    if (textTask !== "") {
+        addTask(textTask);
+        taskInput.value = "";
+        InputDeviceInfo.focus();
+    }
 }
 
-const renderTask = () => {
+function addTask(textTask) {
+        const task = {
+            textTask: taskInput.value,
+            done: false,
+        };
+        taskList.push(task);
+        saveToLocalStorage();
+    }
+
+function renderTask() {
   letTaskToRender = [];
   taskList.forEach((item, i) => {
     let isTaskChecked = (item = done ? "checked" : "");
@@ -59,4 +65,4 @@ const renderTask = () => {
   renderTask();
 
   function toggleDone(e) {}
-};
+})

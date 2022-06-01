@@ -4,7 +4,7 @@
 
 let taskList = [];
 let taskInput = document.querySelector("taskInput");
-let addBtn = document.querySelector(Submit);
+let addBtn = document.querySelector("Submit");
 
 let taskAdder = document.querySelector("taskAdder");
 let myTasksContainer = document.getElementById("myTasks");

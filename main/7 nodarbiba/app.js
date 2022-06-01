@@ -13,7 +13,7 @@ const saveToLocalStorage = () => {
   localStorage.setItem(".taskList", JSON.stringify(taskList));
 };
 
-addBtn.addEventListener("click", (event) => {
+addBtn.addEventListener("submit", (event) => {
   event.preventDefault();
   let taskInput = document.querySelector(".taskInput");
   const textTask = taskInput.value.trim();

@@ -13,25 +13,25 @@ const saveToLocalStorage = () => {
   localStorage.setItem(".taskList", JSON.stringify(taskList));
 };
 
-addBtn.addEventListener("click", event => {
-    event.preventDefault();
-    let taskInput = document.querySelector(".taskInput");
-    const textTask = taskInput.value.trim();
-    if (textTask !== "") {
-        addTask(textTask);
-        taskInput.value = "";
-        InputDeviceInfo.focus();
-    }
-}
+addBtn.addEventListener("click", (event) => {
+  event.preventDefault();
+  let taskInput = document.querySelector(".taskInput");
+  const textTask = taskInput.value.trim();
+  if (textTask !== "") {
+    addTask(textTask);
+    taskInput.value = "";
+    InputDeviceInfo.focus();
+  }
+});
 
 function addTask(textTask) {
-        const task = {
-            textTask: taskInput.value,
-            done: false,
-        };
-        taskList.push(task);
-        saveToLocalStorage();
-    }
+  const task = {
+    textTask: taskInput.value,
+    done: false,
+  };
+  taskList.push(task);
+  saveToLocalStorage();
+}
 
 function renderTask() {
   letTaskToRender = [];
@@ -65,4 +65,4 @@ function renderTask() {
   renderTask();
 
   function toggleDone(e) {}
-})
+}

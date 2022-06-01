@@ -7,15 +7,14 @@ let addBtn = document.querySelector(".addBtn");
 
 let taskAdder = document.querySelector("taskAdder");
 let myTasksContainer = document.getElementById("myTasks");
-taskList = JSON.parse(localStorage.getItem("taskList"));
+const tasks = JSON.parse(localStorage.getItem("taskList")) || [];
 
 const saveToLocalStorage = () => {
-  localStorage.setItem(".taskList", JSON.stringify(taskList));
+  localStorage.setItem("taskList", JSON.stringify(tasks));
 };
 
 addBtn.addEventListener("submit", (event) => {
-  event.preventDefault();
-  let taskInput = document.querySelector(".taskInput");
+  const taskInput = document.querySelector(".taskInput");
   const textTask = taskInput.value.trim();
   if (textTask !== "") {
     addTask(textTask);
@@ -24,7 +23,8 @@ addBtn.addEventListener("submit", (event) => {
   }
 });
 
-function addTask(textTask) {
+function addTask(event) {
+  event.preventDefault();
   const task = {
     textTask: taskInput.value,
     done: false,

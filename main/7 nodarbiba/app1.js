@@ -3,54 +3,77 @@
 // Aplikacijas darbas principi var apskatit video appDemo.mp4
 
 /* Mums nepieciešams izviedot nelielu todo aplikaciju ar iespeju pievienot izdzest un atziment izdarito notikumu
-    Mums nepieciešams 4 funkcijas
-        addTask() - pievienot notikumu
-            1 - izveleties inputa vertibu izmantojot selector.value;
-            2 - izveido object priekš notikums 
-                const task = {
-                    textTask,
-                    done: false
-                }
-            3 - izsaukt funkciju saveToLocalStorage
+ */
+const taskAdder = document.querySelector(".taskAdder");
+const myTasks = document.querySelector(".myTasks");
+const tasks = JSON.parse(localStorage.getItem("taskList")) || [];
+// gan kad ir dati, gan kad nav
 
-        saveToLocalStorage() - saglaba notikumu
-            1 - jaizmanto JSON.stringify
-            2 - jaizmanto atslegst vards 'taskList'
+taskAdder.addEventListener("submit", addTask);
+myTasks.addEventListener("click", toggleDone);
+//otrs domāts, lai nomainītu statusu - spiežot uz krustiņu
 
-        renderTask() - izvada sarakstu notikumu
-            1 - jaizmanto innerHTML
-            2 - jaizmanto vienu no cikliem lai iziet cauri visam localstorage ierakstiem
-            3 - šis html palidzes izvadit datus
-            return `<li data-index='${i}'>
+function renderTask() {
+  //lai izvadītu datus vajadzīgajā vietā
+  let html = tasks.map(function (data, i) {
+    //var arī ar forEach ciklu - šis ir map
+    let myClass = data.done ? "done" : "";
+
+    //ja true klasi definē par done,
+
+    return `<li data-index='${i}'>
                         <div class="">
                             ${data.textTask}<span class="remove">❌</span>
                         </div>
                     </li>`;
-            4 - Gadijuma ja elements ir apziments ka izdarits mums nepiecišams pievienot klassi .done ../style.css
-                Lidz ar to nepieciešams izveidot parbaudi if else lai parbaudit test.done === 'true'
+  });
+  myTasks.innerHTML = html.join("");
+}
 
-        toggleDone() - atzimet ka izdarito
-            Mums nepiecišams pievinot 2 eventListener
-                addEventListener('submit', addTask);   ----> nostradas kad mes nospiedam pievinot pogu un izsaucam funkciju addTask
-                addEventListener('click', toggleDone); ----> nostradas kad mes nospiedam uz elementu saraksta un izsaucam funkciju toggleDone
+function addTask(e) {
+  e.preventDefault();
+  const textTask = this.querySelector("[name=task]").value;
+  //[name=task] vietā var definēt vai id, vai klasi,ja būtu definēts html
 
-                funkcija toogleDone dara divas darbibas
-                gadijuma ja bija nospiesta izdžešanas poga, mes izdesam elementu no localStorage izsaucam renderTask funkciju lai atjaunto sarakstu
-                gadijuma ja bija nospiest elements mes nomainam elementam done vertibu done: false --> done: true un izsaucam renderTask funkciju lai atjauno sarakstu
-*/
-const taskAdder = document.querySelector(".taskAdder");
-const myTasks = document.querySelector(".myTasks");
-const tasks = JSON.parse(localStorage.getItem("taskList")) || [];
+  const task = {
+    textTask,
+    done: false,
+  };
+  tasks.push(task);
+  saveToLocalStorage();
+  renderTask();
 
-// addEventListener click
-// addEventListener submit
+  this.reset();
+  // restartē elementu
+}
 
-renderTask();
+function saveToLocalStorage() {
+  localStorage.setItem("taskList", JSON.stringify(tasks));
+}
 
-function addTask() {}
+function toggleDone(e) {
+  const myxEl = e.targets;
+  const mySel = myEl.parentElement;
 
-function saveToLocalStorage() {}
+  if (myEl.className === "remove") {
+    //lai pārliecinātos, kas nospiests - atzīmēts kā done- vai spiests uz el vai krustiņu
 
-function renderTask() {}
+    let index = mySel.parenetElement.dataset.index;
 
-function toggleDone(e) {}
+    let = temp = tasks.splice(index, 1);
+    //lai saprastu,kāds elements nospiests
+
+    console.log(temp);
+    //temp saglabā masīvu ar izejas vērtību
+  } else {
+    myEl.classList.toggle("done");
+    //ja nozpiež done nevis remove
+    tasks[mySel.dataset.index].done = !tasks[mySel.dataset.index].done;
+    //aizvieto if :
+    //    if (tasks[4].done === true) {
+    //ja ceturtais el === ar true\
+    //        tasks[4].done===false...
+  }
+  saveToLocalStorage();
+  renderTask();
+}

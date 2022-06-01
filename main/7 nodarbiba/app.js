@@ -3,8 +3,8 @@
 // Aplikacijas darbas principi var apskatit video appDemo.mp4
 
 let taskList = [];
-let taskInput = document.getElementById("taskInput");
-let addBtn = document.querySelector("Submit");
+let taskInput = document.querySelector("taskInput");
+let addBtn = document.querySelector(Submit);
 
 let taskAdder = document.querySelector("taskAdder");
 let myTasksContainer = document.getElementById("myTasks");

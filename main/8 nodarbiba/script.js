@@ -26,6 +26,7 @@ function printValues() {
   let formInputs = Array.from(userForm.elements);
   // izveidtot tukšu masivu kura saglabam vertibas
 
+  const input = document.getElementsByTagName("input");
   // izmantojot getElementsByTagName('input') dabut visus ievadlaukus
 
   // ar for ciklu priekš katra no vertibam var key in inputs

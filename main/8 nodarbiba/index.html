@@ -8,8 +8,8 @@
         <div>
             <label for="">Teksta lauks</label>
             <input 
-                type="" 
-                id=""
+                type="text" 
+                id="text"
                 required
             />
         </div>
@@ -18,7 +18,7 @@
             <label for="">Epasts lauks</label>
             <input 
                 type="email" 
-                id=""
+                id="email"
                 pattern=".+@gmail.com"
                 title=""  
                 required
@@ -28,9 +28,11 @@
         <div>
             <label for="">Teksta lauks ar Min un Max garumu</label>
             <input 
-                type="" 
-                id="" 
+                type="text" 
+                id="text1" 
                 title=""  
+                 minlength="5"
+                maxlength="10"
                 required
             />
         </div>
@@ -38,9 +40,9 @@
         <div>
             <label for="">Parole 1 (jāsatur vismaz 1 lielais burts, 1 mazais burts un 1 cipars)</label>
             <input 
-                type="" 
-                id="" 
-                pattern=""
+                type="password" 
+                id="pass1" 
+                pattern="[A-Za-z0-9]"
                 oninvalid="this.setCustomValidity('')"  
                 required
             />
@@ -49,9 +51,10 @@
         <div>
             <label for="">Parole 2 (jāsatur vismaz 8 simboli 1 lielais burts, 1 mazais burts un 1 cipars)</label>
             <input 
-                type="" 
-                id="" 
-                title="" 
+                type="password" 
+                id="pass2" 
+                title=""
+                pattern="[A-Za-z0-9]^.{8,}$"
                 required
             />
         </div>

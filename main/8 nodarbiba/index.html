@@ -20,7 +20,7 @@
                 type="email" 
                 id="email"
                 pattern=".+@gmail.com"
-                title=""  
+                title="E-pasts"  
                 required
             />
         </div>
@@ -30,8 +30,8 @@
             <input 
                 type="text" 
                 id="text1" 
-                title=""  
-                 minlength="5"
+                title="Teksts nedrīkst būt īsāks par 5 zīmēm un garāks par 10"  
+                minlength="5"
                 maxlength="10"
                 required
             />
@@ -41,9 +41,10 @@
             <label for="">Parole 1 (jāsatur vismaz 1 lielais burts, 1 mazais burts un 1 cipars)</label>
             <input 
                 type="password" 
-                id="pass1" 
+                id="pwd1" 
+                title="Parolei jāsatur vismaz viens lielais burts, mazais burts un cipars"
                 pattern="[A-Za-z0-9]"
-                oninvalid="this.setCustomValidity('')"  
+                oninvalid="this.setCustomValidity('Parole neatbilts prasībām')"  
                 required
             />
         </div>
@@ -52,9 +53,9 @@
             <label for="">Parole 2 (jāsatur vismaz 8 simboli 1 lielais burts, 1 mazais burts un 1 cipars)</label>
             <input 
                 type="password" 
-                id="pass2" 
-                title=""
-                pattern="[A-Za-z0-9]^.{8,}$"
+                id="pwd2" 
+                title="Parolei jābūt 8 zīmes garai un jāsatur vismaz viens lielais burts, mazais burts un cipars"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                 required
             />
         </div>

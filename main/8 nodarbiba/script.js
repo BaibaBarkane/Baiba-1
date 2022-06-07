@@ -3,7 +3,22 @@ function checkZIP() {
   var constraints = {
     lv: [
       "^(LV-)?\\d{4}$",
-      "Latvias ZIPs jabut 4 simboliem un jasakas ar LV-: e.g. LV-3001 or 3007",
+      "Latvijas ZIPs jabut 4 simboliem un jasakas ar LV-: e.g. LV-3001 or 3007",
+    ],
+
+    lt: [
+      "^(LT-)?\\d{5}$",
+      "Lietuvas ZIPs jabut 5 simboliem un jasakas ar LT-",
+    ],
+
+      ee: [
+      "^(EE-)?\\d{5}$",
+      "Igaunijas ZIPs jabut 5 simboliem un jasakas ar EE-",
+    ],
+      
+        no: [
+      "\d{4}",
+      "Norvēģijas ZIPs jabut 4 simboliem",
     ],
   };
 
@@ -21,6 +36,10 @@ function checkZIP() {
     ZIPField.setCustomValidity(constraints[country][1]);
   }
 }
+
+funct isValid (inputField) {
+  return validationRules[inputField.name](inputField.value);
+};
 
 function handleValidity(inputField, errorMsg) {
   if (isValid(inputField)) {
@@ -50,7 +69,6 @@ function printValues(event) {
       keyValuePairs.push(valuePairString);
     }
   });
-
   alert(keyValuePairs.join("; "));
 }
 

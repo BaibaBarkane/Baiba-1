@@ -1,5 +1,4 @@
 function checkZIP() {
-  // Pievinot vel 3 valsti
   var constraints = {
     lv: [
       "^(LV-)?\\d{4}$",
@@ -31,6 +30,43 @@ function checkZIP() {
   }
 }
 
+function validationRules() {
+  text: (value) => {
+    let isValid = Boolean(value);
+    return isValid;
+  };
+
+  email: (value) => {
+    let regEx = /.+@gmail.com/;
+    let isValid = regEx.test(value);
+    return isValid;
+  };
+
+  text1: (value) => {
+    let regEx = /(^\d{5,10}$)/;
+    let isValid = regEx.test(value);
+    return isValid;
+  };
+
+  pwd1: (value) => {
+    let regEx = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])/;
+    let isValid = regEx.test(value);
+    return isValid;
+  };
+
+  pwd2: (value) => {
+    let regEx = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.{8,})/;
+    let isValid = regEx.test(value);
+    return isValid;
+  };
+
+  time: (value) => {
+    let regEx = /(^((0?9|1[0-6]):[0-6][0-9]|18:00)$)/;
+    let isValid = regEx.test(value);
+    return isValid;
+  };
+}
+
 function isValid(inputField) {
   return validationRules[inputField.name](inputField.value);
 }
@@ -43,16 +79,9 @@ function handleValidity(inputField, errorMsg) {
   }
 }
 
-function isValid(inputField) {
-  return validationRules[inputField.name](inputField.value);
-}
-
 function printValues(event) {
   let formInputs = Array.form(userForm.elements);
-  // izveidtot tukšu masivu kura saglabam vertibas
-
   const input = document.getElementsByTagName("input");
-  // izmantojot getElementsByTagName('input') dabut visus ievadlaukus
 
   event.preventDefault();
   let keyValuePairs = [];

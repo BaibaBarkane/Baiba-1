@@ -21,6 +21,8 @@
                 id="email"
                 pattern=".+@gmail.com"
                 title="E-pasts"  
+                oninvalid="this.setCustomValidity('E-pasts neatbilst prasībām')" 
+
                 required
             />
         </div>
@@ -35,7 +37,7 @@
                 maxlength="10"
                 pattern="(^\d{5,10}$)"
                 oninvalid="this.setCustomValidity('Teksts nedrīkst būt īsāks par 5 zīmēm un garāks par 10')" 
-          
+               required
             />
         </div>
       
@@ -57,7 +59,8 @@
                 type="password" 
                 id="pwd2" 
                 title="Parolei jābūt 8 zīmes garai un jāsatur vismaz viens lielais burts, mazais burts un cipars"
-                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.{8,})"
+                oninvalid="this.setCustomValidity('Parolei jābūt 8 zīmes garai un jāsatur vismaz viens lielais burts, mazais burts un cipars')" 
                 required
             />
         </div>
@@ -83,6 +86,7 @@
                 name="time"
                 min="09:00"
                 max="18:00"
+                oninvalid="this.setCustomValidity('Pieejams laiks no plkst. 9 līdz 18')" 
                 required
             />
         </div>
@@ -96,7 +100,7 @@
                 id="ZIP"
             />
             <label for="">Valsts : </label>
-            <select id="">
+            <select id="country">
               <option value="lv">Latvija</option>
               <option value="lt">Lietuva</option>
               <option value="ee">Igaunija </option>
@@ -104,7 +108,7 @@
             </select>
         </div>
 
-        <input id="submit" type="submit" class="button" value="Pārbaudit">
+        <input id="submit" type="submit" class="button" value="Pārbaudīt">
       </form>
 
     <script src="./script.js"></script>

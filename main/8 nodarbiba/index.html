@@ -33,6 +33,7 @@
                 title="Teksts nedrīkst būt īsāks par 5 zīmēm un garāks par 10"  
                 minlength="5"
                 maxlength="10"
+                oninvalid="this.setCustomValidity('Teksts nedrīkst būt īsāks par 5 zīmēm un garāks par 10')" 
                 required
             />
         </div>
@@ -43,7 +44,7 @@
                 type="password" 
                 id="pwd1" 
                 title="Parolei jāsatur vismaz viens lielais burts, mazais burts un cipars"
-                pattern="[A-Za-z0-9]"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])"
                 oninvalid="this.setCustomValidity('Parole neatbilst prasībām')"  
                 required
             />

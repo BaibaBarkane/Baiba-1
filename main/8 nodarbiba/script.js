@@ -22,22 +22,35 @@ function checkZIP() {
   }
 }
 
-function printValues() {
-  let formInputs = Array.from(userForm.elements);
+function handleValidity(inputField, errorMsg) {
+  if (isValid(inputField)) {
+    setFieldValid(inputField);
+  } else {
+    setFieldInvalid(inputField, errorMsg);
+  }
+}
+
+function printValues(event) {
+  let formInputs = Array.form(userForm.elements);
   // izveidtot tukšu masivu kura saglabam vertibas
 
   const input = document.getElementsByTagName("input");
   // izmantojot getElementsByTagName('input') dabut visus ievadlaukus
 
-  // ar for ciklu priekš katra no vertibam var key in inputs
+  event.preventDefault();
+  let keyValuePairs = [];
 
-  // dabujam vertibas inputs[key].value
+  // ar forEach() ciklu iterēsim cauri katram no šī ievadlauku masīva elementiem un iegūsim tā vērtību un name atribūta vērtību
+  formInputs.forEach((inputField) => {
+    // tā kā mūs neinteresē iegūt submit pogas vērtību, ar !== pārliecinamies vai dotās iterācijas jeb cikla elements nav submit poga ar !== operatoru - jeb tag name(birkas nosaukums) nav vienāds ar "SUBMIT".
+    if (inputField.tagName !== "BUTTON") {
+      let valuePairString = `${inputField.name}: ${inputField.value}`;
 
-  // ja value eksiste
+      keyValuePairs.push(valuePairString);
+    }
+  });
 
-  // pievinojam vertibu masiva .push(value);
-
-  // izvadam masivu vertibas uz ekrana alert();
+  alert(keyValuePairs.join("; "));
 }
 
 window.onload = function () {
@@ -45,4 +58,13 @@ window.onload = function () {
   document.getElementById("ZIP").oninput = checkZIP;
 
   // pievienot addEventListener priekš formas submit notikumam un izvadit funkciju printValues()
+  formInputs.forEach((inputField) => {
+    if (inputField.tagName !== "BUTTON" && inputField.tagName !== "SELECT") {
+      inputField.addEventListener("input", resetErrorState);
+      inputField.addEventListener("blur", validateField);
+    } else if (inputField.tagName === "SELECT") {
+      inputField.addEventListener("change", handlePoValidity);
+    }
+  });
+  userForm.addEventListener("submit", printvalues);
 };

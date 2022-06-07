@@ -30,6 +30,10 @@ function handleValidity(inputField, errorMsg) {
   }
 }
 
+function isValid(inputField) {
+  return validationRules[inputField.name](inputField.value);
+}
+
 function printValues(event) {
   let formInputs = Array.form(userForm.elements);
   // izveidtot tukšu masivu kura saglabam vertibas
@@ -40,12 +44,9 @@ function printValues(event) {
   event.preventDefault();
   let keyValuePairs = [];
 
-  // ar forEach() ciklu iterēsim cauri katram no šī ievadlauku masīva elementiem un iegūsim tā vērtību un name atribūta vērtību
   formInputs.forEach((inputField) => {
-    // tā kā mūs neinteresē iegūt submit pogas vērtību, ar !== pārliecinamies vai dotās iterācijas jeb cikla elements nav submit poga ar !== operatoru - jeb tag name(birkas nosaukums) nav vienāds ar "SUBMIT".
     if (inputField.tagName !== "BUTTON") {
       let valuePairString = `${inputField.name}: ${inputField.value}`;
-
       keyValuePairs.push(valuePairString);
     }
   });
@@ -57,7 +58,6 @@ window.onload = function () {
   document.getElementById("Country").onchange = checkZIP;
   document.getElementById("ZIP").oninput = checkZIP;
 
-  // pievienot addEventListener priekš formas submit notikumam un izvadit funkciju printValues()
   formInputs.forEach((inputField) => {
     if (inputField.tagName !== "BUTTON" && inputField.tagName !== "SELECT") {
       inputField.addEventListener("input", resetErrorState);

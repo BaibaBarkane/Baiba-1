@@ -1,17 +1,12 @@
 // TODO app (dienas planotaju)
-// Nokopejiet šo mapi savas majas darba mape
-// Aplikacijas darbas principi var apskatit video appDemo.mp4
-
-let taskList = [];
-let addBtn = document.querySelector(".addBtn");
 
 let taskAdder = document.querySelector("taskAdder");
 let myTasksContainer = document.getElementById("myTasks");
 const tasks = JSON.parse(localStorage.getItem("taskList")) || [];
 
-const saveToLocalStorage = () => {
+function saveToLocalStorage() {
   localStorage.setItem("taskList", JSON.stringify(tasks));
-};
+}
 
 addBtn.addEventListener("submit", (event) => {
   const taskInput = document.querySelector(".taskInput");
@@ -31,6 +26,8 @@ function addTask(event) {
   };
   taskList.push(task);
   saveToLocalStorage();
+  renderTask();
+  this.reset;
 }
 
 function renderTask() {
@@ -46,21 +43,6 @@ function renderTask() {
                     </li>`;
   });
   myTasksContainer.innerHTML = tasksToRender.join("");
-
-  //       4 - Gadijuma ja elements ir apziments ka izdarits mums nepiecišams pievienot klassi .done ../style.css
-  //         Lidz ar to nepieciešams izveidot parbaudi if else lai parbaudit test.done === 'true'
-
-  //  toggleDone() - atzimet ka izdarito
-  //       Mums nepiecišams pievinot 2 eventListener
-  //          addEventListener('submit', addTask);   ----> nostradas kad mes nospiedam pievinot pogu un izsaucam funkciju addTask
-  //          addEventListener('click', toggleDone); ----> nostradas kad mes nospiedam uz elementu saraksta un izsaucam funkciju toggleDone
-
-  /*             funkcija toogleDone dara divas darbibas
-                 gadijuma ja bija nospiesta izdžešanas poga, mes izdesam elementu no localStorage izsaucam renderTask funkciju lai atjaunto sarakstu
-                 gadijuma ja bija nospiest elements mes nomainam elementam done vertibu done: false --> done: true un izsaucam renderTask funkciju lai atjauno sarakstu
- */
-  // addEventListener click
-  // addEventListener submit
 
   renderTask();
 

@@ -5,6 +5,8 @@ let myTasks = document.getElementById(".myTasks");
 const tasks = JSON.parse(localStorage.getItem("taskList")) || [];
 
 taskAdder.addEventListener("submit", addTask);
+renderTask();
+
 myTasks.addEventListener("click", toggleDone);
 
 function renderTask() {

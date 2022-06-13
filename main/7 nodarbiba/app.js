@@ -28,6 +28,7 @@ function renderTask() {
 
 function addTask(event) {
   event.preventDefault();
+  const textTask = this.querySelector("[name=task]").value;
   const task = {
     textTask: taskInput.value,
     done: false,
@@ -35,11 +36,11 @@ function addTask(event) {
   taskList.push(task);
   saveToLocalStorage();
   renderTask();
-  this.reset;
+  this.reset();
 }
 
-function toggleDone(e) {
-  const myEl = e.target;
+function toggleDone(event) {
+  const myEl = event.targets;
   const mySel = myEl.parentElement;
   if (myEl.className === "remove") {
     let index = mySel.parentElement.dataset.index;

@@ -19,10 +19,6 @@ function renderTask() {
   myTasksContainer.innerHTML = tasksToRender.join("");
 }
 
-function saveToLocalStorage() {
-  localStorage.setItem("taskList", JSON.stringify(tasks));
-}
-
 function addTask(event) {
   event.preventDefault();
   const textTask = this.querySelector("[name=task]").value;
@@ -34,6 +30,10 @@ function addTask(event) {
   saveToLocalStorage();
   renderTask();
   this.reset();
+}
+
+function saveToLocalStorage() {
+  localStorage.setItem("taskList", JSON.stringify(tasks));
 }
 
 function toggleDone(event) {

@@ -1,22 +1,13 @@
 // TODO app (dienas planotaju)
 
-let taskAdder = document.querySelector(".taskAdder");
+const taskAdder = document.querySelector(".taskAdder");
 let myTasksContainer = document.getElementById(".myTasks");
 const tasks = JSON.parse(localStorage.getItem("taskList")) || [];
 
 taskAdder.addEventListener("submit", addTask);
 myTasks.addEventListener("click", toggleDone);
 
-function saveToLocalStorage() {
-  localStorage.setItem("taskList", JSON.stringify(tasks));
-}
-
 function renderTask() {
-  // let TasksToRender = [];
-  // taskList.forEach((item, i) => {
-  //   let isTaskChecked = (item = done ? "checked" : "");
-  //  let task = "";
-  //  tasksToRender.push(task);
   let tasksToRender = tasks.map(function (data, i) {
     let myClass = data.done ? "done" : "";
     return `<li data-index='${i}'>
@@ -26,6 +17,10 @@ function renderTask() {
                     </li>`;
   });
   myTasksContainer.innerHTML = tasksToRender.join("");
+}
+
+function saveToLocalStorage() {
+  localStorage.setItem("taskList", JSON.stringify(tasks));
 }
 
 function addTask(event) {

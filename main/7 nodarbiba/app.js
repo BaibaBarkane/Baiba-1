@@ -12,11 +12,13 @@ function saveToLocalStorage() {
 }
 
 function renderTask() {
-  let TasksToRender = [];
-  taskList.forEach((item, i) => {
-    let isTaskChecked = (item = done ? "checked" : "");
-    let task = "";
-    tasksToRender.push(task);
+  // let TasksToRender = [];
+  // taskList.forEach((item, i) => {
+  //   let isTaskChecked = (item = done ? "checked" : "");
+  //  let task = "";
+  //  tasksToRender.push(task);
+  let tasksToRender = tasks.map(function (data, i) {
+    let myClass = data.done ? "done" : "";
     return `<li data-index='${i}'>
                         <div class="">
                             ${data.textTask}<span class="remove">❌</span>

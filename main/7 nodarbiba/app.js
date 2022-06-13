@@ -1,14 +1,14 @@
 // TODO app (dienas planotaju)
 
 const taskAdder = document.querySelector(".taskAdder");
-let myTasksContainer = document.getElementById(".myTasks");
+let myTasks = document.getElementById(".myTasks");
 const tasks = JSON.parse(localStorage.getItem("taskList")) || [];
 
 taskAdder.addEventListener("submit", addTask);
 myTasks.addEventListener("click", toggleDone);
 
 function renderTask() {
-  let tasksToRender = tasks.map(function (data, i) {
+  let html = tasks.map(function (data, i) {
     let myClass = data.done ? "done" : "";
     return `<li data-index='${i}'>
                         <div class="">
@@ -16,7 +16,7 @@ function renderTask() {
                         </div>
                     </li>`;
   });
-  myTasksContainer.innerHTML = tasksToRender.join("");
+  myTasks.innerHTML = html.join("");
 }
 
 function addTask(event) {

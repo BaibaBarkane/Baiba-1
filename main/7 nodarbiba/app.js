@@ -18,18 +18,6 @@ addBtn.addEventListener("submit", (event) => {
   }
 });
 
-function addTask(event) {
-  event.preventDefault();
-  const task = {
-    textTask: taskInput.value,
-    done: false,
-  };
-  taskList.push(task);
-  saveToLocalStorage();
-  renderTask();
-  this.reset;
-}
-
 function renderTask() {
   letTaskToRender = [];
   taskList.forEach((item, i) => {
@@ -42,6 +30,19 @@ function renderTask() {
                         </div>
                     </li>`;
   });
+
+  function addTask(event) {
+    event.preventDefault();
+    const task = {
+      textTask: taskInput.value,
+      done: false,
+    };
+    taskList.push(task);
+    saveToLocalStorage();
+    renderTask();
+    this.reset;
+  }
+
   myTasksContainer.innerHTML = tasksToRender.join("");
 
   renderTask();

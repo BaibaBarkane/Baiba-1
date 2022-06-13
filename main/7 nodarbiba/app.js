@@ -8,15 +8,8 @@ function saveToLocalStorage() {
   localStorage.setItem("taskList", JSON.stringify(tasks));
 }
 
-addBtn.addEventListener("submit", (event) => {
-  const taskInput = document.querySelector(".taskInput");
-  const textTask = taskInput.value.trim();
-  if (textTask !== "") {
-    addTask(textTask);
-    taskInput.value = "";
-    InputDeviceInfo.focus();
-  }
-});
+taskAdder.addEventListener("submit", addTask);
+myTasks.addEventListener("click", toggleDone);
 
 function renderTask() {
   letTaskToRender = [];

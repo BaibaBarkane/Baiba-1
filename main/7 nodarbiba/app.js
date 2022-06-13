@@ -29,12 +29,12 @@ function addTask(event) {
     done: false,
   };
   taskList.push(task);
-  saveToLocalStorage();
+  saveToLocalStorage(task);
   renderTask();
   this.reset();
 }
 
-function saveToLocalStorage() {
+function saveToLocalStorage(task) {
   localStorage.setItem("taskList", JSON.stringify(tasks));
 }
 

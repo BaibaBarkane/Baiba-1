@@ -32,7 +32,7 @@ function addTask(event) {
   event.preventDefault();
   const textTask = this.querySelector("[name=task]").value;
   const task = {
-    textTask: taskInput.value,
+    textTask,
     done: false,
   };
   taskList.push(task);

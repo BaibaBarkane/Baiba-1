@@ -12,7 +12,7 @@ function saveToLocalStorage() {
 }
 
 function renderTask() {
-  letTaskToRender = [];
+  let TasksToRender = [];
   taskList.forEach((item, i) => {
     let isTaskChecked = (item = done ? "checked" : "");
     let task = "";

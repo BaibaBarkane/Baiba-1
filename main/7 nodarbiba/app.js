@@ -24,7 +24,7 @@ function renderTask() {
                         </div>
                     </li>`;
   });
-  myTasks.innerHTML = task.join("");
+  taskListArray.innerHTML = task.join("");
 }
 
 function addTask(event) {
@@ -41,7 +41,7 @@ function addTask(event) {
 
 function saveToLocalStorage(task) {
   taskList.push(task);
-  localStorage.setItem("taskList", JSON.stringify(tasks));
+  localStorage.setItem("taskList", JSON.stringify(task));
 }
 
 function toggleDone(event) {

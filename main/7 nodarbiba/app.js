@@ -58,3 +58,7 @@ function toggleDone(event) {
   saveToLocalStorage();
   renderTask();
 }
+taskAdder.addEventListener("submit", addTask);
+renderTask();
+
+myTasks.addEventListener("click", toggleDone);

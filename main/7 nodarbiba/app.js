@@ -34,13 +34,13 @@ function addTask(event) {
     textTask,
     done: false,
   };
+  taskList.push(task);
   saveToLocalStorage(task);
   renderTask();
   this.reset();
 }
 
 function saveToLocalStorage(task) {
-  taskList.push(task);
   localStorage.setItem("taskList", JSON.stringify(task));
 }
 

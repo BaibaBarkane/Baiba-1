@@ -1,64 +1,56 @@
 const taskAdder = document.querySelector(".taskAdder");
 const myTasks = document.querySelector(".myTasks");
-
-//Use localStorage to store todos
 const tasks = JSON.parse(localStorage.getItem("taskList")) || [];
 
-// Check if there is any todo in localStorage and add them to the list
-if (tasks) {
-  tasks.forEach((tasks) => addTask(tasks));
-}
+taskAdder.addEventListener("submit", addTask);
+myTasks.addEventListener("click", toggleDone);
 
-// Add todo on enter key press
-form.addEventListener("submit", (e) => {
+// addEventListener click
+// addEventListener submit
+
+renderTask();
+
+function addTask(e) {
   e.preventDefault();
-  addTask();
-});
-
-// Create a function to add todo to the list
-function addTask(task) {
-  let taskText = input.value;
-  if (task) {
-    taskText = task.text;
-  }
-  if (taskText) {
-    // Create a li for adding the todo list
-    const taskEl = document.createElement("li");
-    if (task && task.completed) {
-      //Add completed class to the li
-      taskEl.classList.add("completed");
-    }
-    taskEl.innerText = taskText;
-    //Add click event listener to the li to toggle the completed class
-    taskEl.addEventListener("click", () => {
-      taskEl.classList.toggle("completed");
-      addtask();
-    });
-    //Add delete event listener to the li to delete the li
-    taskEl.addEventListener("contextmenu", (e) => {
-      e.preventDefault();
-      taskEl.remove();
-      addTask();
-    });
-    //Add the li to the existng list
-    tasksList.appendChild(taskEl);
-    input.value = "";
-    //Update the localStorage
-    addTask();
-  }
+  const textTask = this.querySelector("[name=task]").value;
+  const task = {
+    textTask: newTask,
+    done: false,
+  };
+  saveToLocalStorage(task);
 }
 
-function adTask() {
-  //Get all the todos from the list
-  taskEl = document.querySelectorAll("li");
-  const tasks = [];
-  //Loop through the todos and add them to the todos array
-  taskEl.forEach((taskkEl) => {
-    tasks.push({
-      text: taskEl.innerText,
-      completed: taskEl.classList.contains("completed"),
-    });
+function saveToLocalStorage(task) {
+  tasks.push(task);
+  localStorage.setItem("taskList", JSON.stringify(tasks));
+}
+function renderTask() {
+  let html = tasks.map(function (data, i) {
+    let myClass = data.done ? "done" : "";
+    return `<li data-index='${i}'>
+                <div class="${myClass}">
+                    ${data.textTask}<span class="remove">❌</span>
+                </div>
+            </li>`;
   });
-  //Store the todos in the localStorage and stringify it
-  localStorage.setItem("tasks", JSON.stringify(tasks));
+  myTasks.innerHTML = html.join("");
+}
+
+function saveToLocalStorage() {
+  localStorage.setItem("taskList", JSON.stringify(task));
+}
+
+function toggleDone(e) {
+  const myEl = e.target;
+  const mySel = myEl.parentElement;
+  if (myEl.className === "remove") {
+    let index = meSel.parentElemen.dataset.index;
+    let temp = task.splice(index, 1);
+    console.log(temp);
+  } else {
+    myEl.classList.toggle("done");
+    tasks[mySel.dataset.index].dine = !tasks[mySel.dataset.index].done;
+  }
+  saveToLocalStorage();
+  renderTask();
 }

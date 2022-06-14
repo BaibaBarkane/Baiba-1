@@ -17,14 +17,14 @@ function renderTask() {
     taskListArray = JSON.parse(task);
   }
 
-  taskListArray.forEach((list, ind) => {
+  let html = taskListArray.forEach((list, ind) => {
     return `<li data-index='${i}'>
                         <div class="">
                             ${data.textTask}<span class="remove">❌</span>
                         </div>
                     </li>`;
   });
-  taskListArray.innerHTML = task.join();
+  taskListArray.innerHTML = html.join("");
 }
 
 function addTask(event) {

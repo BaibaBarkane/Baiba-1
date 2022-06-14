@@ -16,7 +16,7 @@ function renderTask() {
   } else {
     taskListArray = JSON.parse(task);
   }
-  let htmlCode = "";
+
   taskListArray.forEach((list, ind) => {
     return `<li data-index='${i}'>
                         <div class="">

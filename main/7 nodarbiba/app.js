@@ -5,9 +5,8 @@ let myTasks = document.getElementById(".myTasks");
 const taskList = JSON.parse(localStorage.getItem("taskList")) || [];
 
 taskAdder.addEventListener("submit", addTask);
-renderTask();
-
 myTasks.addEventListener("click", toggleDone);
+renderTask();
 
 function renderTask() {
   let task = localStorage.getItem("task");
@@ -58,7 +57,3 @@ function toggleDone(event) {
   saveToLocalStorage();
   renderTask();
 }
-taskAdder.addEventListener("submit", addTask);
-renderTask();
-
-myTasks.addEventListener("click", toggleDone);

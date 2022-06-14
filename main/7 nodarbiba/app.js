@@ -24,7 +24,7 @@ function renderTask() {
                         </div>
                     </li>`;
   });
-  taskListArray.innerHTML = task.join("");
+  taskListArray.innerHTML = task.join();
 }
 
 function addTask(event) {

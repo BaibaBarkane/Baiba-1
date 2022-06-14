@@ -34,7 +34,7 @@ function addTask(event) {
     textTask,
     done: false,
   };
-  taskList.push(task);
+  taskListArray.push(task);
   saveToLocalStorage(task);
   renderTask();
   this.reset();

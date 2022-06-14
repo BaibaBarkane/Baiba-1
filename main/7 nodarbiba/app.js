@@ -17,7 +17,7 @@ function renderTask() {
     taskListArray = JSON.parse(task);
   }
   let htmlCode = "";
-  todoArray.forEach((list, ind) => {
+  taskListArray.forEach((list, ind) => {
     return `<li data-index='${i}'>
                         <div class="">
                             ${data.textTask}<span class="remove">❌</span>

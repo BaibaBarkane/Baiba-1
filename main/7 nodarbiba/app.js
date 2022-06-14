@@ -2,7 +2,7 @@
 
 const taskAdder = document.querySelector(".taskAdder");
 let myTasks = document.getElementById(".myTasks");
-const tasks = JSON.parse(localStorage.getItem("taskList")) || [];
+const taskList = JSON.parse(localStorage.getItem("taskList")) || [];
 
 taskAdder.addEventListener("submit", addTask);
 renderTask();
@@ -10,8 +10,14 @@ renderTask();
 myTasks.addEventListener("click", toggleDone);
 
 function renderTask() {
-  let html = tasks.map(function (data, i) {
-    let myClass = data.done ? "done" : "";
+  let task = localStorage.getItem("task");
+  if (task === null) {
+    taskListArray = [];
+  } else {
+    taskListArray = JSON.parse(task);
+  }
+  let htmlCode = "";
+  todoArray.forEach((list, ind) => {
     return `<li data-index='${i}'>
                         <div class="">
                             ${data.textTask}<span class="remove">❌</span>

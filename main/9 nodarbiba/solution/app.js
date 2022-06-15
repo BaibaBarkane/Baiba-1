@@ -42,29 +42,27 @@
         - izmantojot innerHTML pievienot img tag ar src=${data.message}
 */
 
-
-
-const dogSelector   = document.getElementById('dogSelector');
-const dogimg        = document.getElementById('dogImg');
+const dogSelector = document.getElementById("dogSelector");
+const dogimg = document.getElementById("dogImg");
 
 function renderSelectOptions(data) {
-    data.forEach(breed => {
-        dogSelector.innerHTML += `<option value=${breed.value}>${breed.name}</option>`
-    })
-} 
+  data.forEach((breed) => {
+    dogSelector.innerHTML += `<option value=${breed.value}>${breed.name}</option>`;
+  });
+}
 
 function renderDogData(data) {
-    dogImg.innerHTML = `<img src='${data.message}'>`
+  dogImg.innerHTML = `<img src='${data.message}'>`;
 }
 
 function getDogImg() {
-    const url = `https://dog.ceo/api/breed/${dogSelector.value}/images/random`;
+  const url = `https://dog.ceo/api/breed/${dogSelector.value}/images/random`;
 
-    fetch(url)
-        .then(response => response.json())
-        .then(data => renderDogData(data))
-        .catch(error => alert(error));
+  fetch(url)
+    .then((response) => response.json())
+    .then((data) => renderDogData(data))
+    .catch((error) => alert(error));
 }
 
 renderSelectOptions(data);
-dogSelector.addEventListener('change', getDogImg);
+dogSelector.addEventListener("change", getDogImg);

@@ -3,8 +3,7 @@ const dogImgSelector = document.getElementById("dogImg");
 
 function renderDogData(data) {
   data.forEach((breed) => {
-    dogSelector.innerHTML +=
-      "<option value=${breed.value}>${breed.name}</option>";
+    dogSelector.innerHTML += `<option value=${breed.value}>${breed.name}</option>`;
   });
 }
 

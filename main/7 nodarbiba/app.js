@@ -40,10 +40,10 @@ function saveToLocalStorage() {
 
 function toggleDone(e) {
   const myEl = e.target;
-  const mySel = myEl.parantElement;
+  const mySel = myEl.parentElement;
 
   if (myEl.className === "remove") {
-    let index = mySel.parantElement.dataset.index;
+    let index = mySel.parentElement.dataset.index;
     let temp = tasks.splice(index, 1);
     console.log(temp);
   } else {

@@ -1,58 +1,54 @@
-// TODO app (dienas planotaju)
-
-const taskAdder = document.querySelector(".taskAdder");
-let myTasks = document.getElementById(".myTasks");
-const taskList = JSON.parse(localStorage.getItem("taskList")) || [];
+const taskAdder = document.querySelector(".taskAdder"); //pievieno elementus
+const myTasks = document.querySelector(".myTasks"); //Šeit izvadam datus no Localstorage
+const tasks = JSON.parse(localStorage.getItem("taskList")) || []; //funkcija, kas noglabās in storage
 
 taskAdder.addEventListener("submit", addTask);
 myTasks.addEventListener("click", toggleDone);
+
 renderTask();
 
-function renderTask() {
-  let task = localStorage.getItem("task");
-  if (task === null) {
-    taskListArray = [];
-  } else {
-    taskListArray = JSON.parse(task);
-  }
-
-  let html = taskListArray.forEach((list, ind) => {
-    return `<li data-index='${i}'>
-                        <div class="">
-                            ${data.textTask}<span class="remove">❌</span>
-                        </div>
-                    </li>`;
-  });
-  taskListArray.innerHTML = html.join("");
-}
-
-function addTask(event) {
-  event.preventDefault();
+function addTask(e) {
+  e.preventDefault();
   const textTask = this.querySelector("[name=task]").value;
   const task = {
     textTask,
     done: false,
   };
-  taskListArray.push(task);
-  saveToLocalStorage(task);
+
+  tasks.push(task);
+  saveToLocalStorage();
   renderTask();
   this.reset();
 }
 
-function saveToLocalStorage(task) {
-  localStorage.setItem("taskList", JSON.stringify(task));
+function renderTask() {
+  let html = tasks.map(function (data, i) {
+    let myClass = data.done ? "done" : "";
+    return `<li data-index='${i}'>
+                <div class='${myClass}'>
+                 ${data.textTask}<span class="remove">❌</span>
+                 </div>
+             </li>`;
+  });
+
+  myTasks.innerHTML = html.join("");
 }
 
-function toggleDone(event) {
-  const myEl = event.targets;
-  const mySel = myEl.parentElement;
+function saveToLocalStorage() {
+  localStorage.setItem("taskList", JSON.stringify(tasks));
+}
+
+function toggleDone(e) {
+  const myEl = e.target;
+  const mySel = myEl.parantElement;
+
   if (myEl.className === "remove") {
-    let index = mySel.parentElement.dataset.index;
+    let index = mySel.parantElement.dataset.index;
     let temp = tasks.splice(index, 1);
     console.log(temp);
   } else {
     myEl.classList.toggle("done");
-    tasks[mySel.dataset.index].done = !tasks[mySel.dataset.index].done;
+    tasks[mySel.dataset.index].done = !task[mySel.dataset.index].done;
   }
   saveToLocalStorage();
   renderTask();

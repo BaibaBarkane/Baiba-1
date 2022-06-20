@@ -22,7 +22,6 @@ body {
 }
 
 .inputs input[type="text"] {
-  border: radius 10px;
   height: 3.5rem;
   width: 20rem;
   background: #212121;
@@ -32,7 +31,7 @@ body {
   border: none;
   background-color: transparent;
   border: 2px solid #c2c2c2;
-  border-radius: 2px;
+  border-radius: 7px;
   margin-right: 4px;
 }
 
@@ -40,11 +39,11 @@ body {
   border: radius 10px;
   height: 3.2rem;
   width: 6.5rem;
-  background: rgb(225, 172, 96);
+  background: rgb(226, 150, 45);
   font-weight: bold;
   color: white;
   font-size: 1.2rem;
   margin-top: 20px;
   border: none;
-  border-radius: 2px;
+  border-radius: 7px;
 }

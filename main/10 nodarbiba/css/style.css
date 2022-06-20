@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 body {
+  border: radius 7px;
   background: #9d9e9f;
 }
 
@@ -18,4 +19,30 @@ body {
   text-align: center;
   justify-content: center;
   background: white;
+}
+
+.inputs input[type="text"] {
+  height: 3.5rem;
+  width: 20rem;
+  background: #212121;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  border: 2px solid #c2c2c2;
+  border-radius: 2px;
+  margin-right: 4px;
+}
+
+.inputs input[type="submit"] {
+  height: 3.2rem;
+  width: 6.5rem;
+  background: #0a67ca;
+  font-weight: bold;
+  color: white;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  border: none;
+  border-radius: 2px;
 }

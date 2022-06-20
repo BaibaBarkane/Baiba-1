@@ -47,3 +47,39 @@ body {
   border: none;
   border-radius: 7px;
 }
+
+.display {
+  text-align: center;
+  width: 400px;
+  color: #16a864;
+}
+.wrapper {
+  margin: 0 9rem;
+  background-color: white;
+  height: 45vh;
+  margin: 50px auto;
+  border-radius: 7px;
+}
+.wrapper h2 {
+  padding: 5px 0;
+  text-align: center;
+  background: #0548b5;
+  color: white;
+  font-family: sans-serif;
+}
+.wrapper p {
+  margin: 20px 50px;
+  margin-right: 20px;
+  text-align: left;
+  color: #04214c;
+  font-size: 23px;
+}
+
+.wrapper h2 span {
+  font-size: 26px;
+  color: #9beefb;
+}
+.wrapper p span {
+  color: #90006e;
+  font-size: 25px;
+}

@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 body {
-  border: radius 7px;
   background: #9d9e9f;
 }
 
@@ -15,6 +14,7 @@ body {
 }
 
 .inputs {
+  border: radius 7px;
   padding: 2rem 0 2rem 0;
   text-align: center;
   justify-content: center;
@@ -22,6 +22,7 @@ body {
 }
 
 .inputs input[type="text"] {
+  border: radius 7px;
   height: 3.5rem;
   width: 20rem;
   background: #212121;
@@ -36,9 +37,10 @@ body {
 }
 
 .inputs input[type="submit"] {
+  border: radius 7px;
   height: 3.2rem;
   width: 6.5rem;
-  background: #0a67ca;
+  background: rgb(225, 172, 96);
   font-weight: bold;
   color: white;
   font-size: 1.2rem;

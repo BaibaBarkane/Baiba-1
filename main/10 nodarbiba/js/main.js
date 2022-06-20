@@ -11,6 +11,9 @@ const sunSet = document.querySelector("#sunset");
 
 apik = "3045dd712ffe6e702e3245525ac7fa38";
 
+// Temperatura tiek pievienota kelvinos lidz ar to nepicišam parveidot tos celcios
+// no data pievinotas temperaturas jaatņem 273 tad mes dabusim temperaturu celsijos
+
 function convertion(val) {
   return (val - 273).toFixed(2);
 }
@@ -47,9 +50,6 @@ tn.addEventListener("click", function () {
 // addEventListener
 // fetch
 // response
-// izvadit datus
-// Temperatura tiek pievinota kelvinos lidz ar to nepicišam parveidot tos celcios
-// no data pievinotas temperaturas jaatņem 273 tad mes dabusim temperaturu celcios
 
 // datu response piemers
 //   {

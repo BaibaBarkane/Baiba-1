@@ -33,15 +33,15 @@ tn.addEventListener("click", function () {
       let descrip = data["weather"]["0"]["description"];
       let tempature = data["main"]["temp"];
       let wndspd = data["wind"]["speed"];
-      //    let rise = data["sun"]["rise"];
-      //   let set = data["sun"]["set"];
+      let rise = data["sun"]["rise"];
+      let set = data["sun"]["set"];
 
       city.innerHTML = `Weather of <span>${nameval}<span>`;
       temp.innerHTML = `Temperature: <span>${convertion(tempature)} C</span>`;
       description.innerHTML = `Sky Conditions: <span>${descrip}<span>`;
       wind.innerHTML = `Wind Speed: <span>${wndspd} km/h<span>`;
-      sunRise.innerHTML = "<span.${rise}</span>";
-      sunSet.innerHTML = "<span.${set}</span>";
+      sunRise.innerHTML = `Sun rise: <span.${rise}</span>`;
+      sunSet.innerHTML = `Sun set: <span.${set}</span>`;
     })
     .catch((err) => alert("You entered Wrong city name"));
 });

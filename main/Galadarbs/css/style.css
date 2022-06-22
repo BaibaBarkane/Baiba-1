@@ -48,6 +48,7 @@ body {
   margin-top: 20px;
   border: none;
   border-radius: 7px;
+  cursor: pointer;
 }
 
 .button:hover {

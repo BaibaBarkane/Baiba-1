@@ -3,10 +3,10 @@
 let inputValue = document.getElementById('cityinput');
 let btn = document.getElementById('add');
 let temp = document.getElementById('temp');
-let descrip = document.querySelector("#description");
-let wind = document.querySelector('#wind');
-let sunRise = document.querySelector('#sunrise');
-let sunSet = document.querySelector('#sunset');
+let descrip = document.querySelector('description');
+let wind = document.querySelector('wind');
+let sunRise = document.querySelector('sunrise');
+let sunSet = document.querySelector('sunset');
 let city = '';
 
 let apik = "3045dd712ffe6e702e3245525ac7fa38";

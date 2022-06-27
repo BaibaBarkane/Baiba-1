@@ -1,12 +1,12 @@
 // Tiek definēti mainīgie
 
-const inputval = document.querySelector("#cityinput");
-const btn = document.querySelector("#add");
+const inputval = document.querySelector("cityinput");
+const btn = document.querySelector("add");
 const city = document.querySelector("#cityoutput");
 const descrip = document.querySelector("#description");
 const temp = document.querySelector("#temp");
 const wind = document.querySelector("#wind");
-const sunRise = document.querySelector("#sunrise");
+const sunRise = document.querySelector("sunrise");
 const sunSet = document.querySelector("#sunset");
 
 apik = "3045dd712ffe6e702e3245525ac7fa38";
@@ -20,7 +20,7 @@ function convertion(val) {
 
 // fetch metode
 
-tn.addEventListener("click", function () {
+btn.addEventListener("click", function () {
   fetch(
     "https://api.openweathermap.org/data/2.5/weather?q=" +
       inputval.value +

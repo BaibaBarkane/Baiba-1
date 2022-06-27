@@ -71,7 +71,7 @@ body {
 .wrapper h2 {
   padding: 5px 0;
   text-align: center;
-  background: #4c4c4d;
+  background: rgb(226, 150, 45);
   color: white;
   font-family: sans-serif;
 }

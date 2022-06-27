@@ -16,17 +16,44 @@ function toCelsius(temp) {
 }
 
 function renderData() {
-temp.innerHTML='Temperature: ${data.main.temp)}' C'
-}
+  temp.innerHTML = 'Temperature: ${data.main.temp)} C';
+      let nameval = data["name"];
+      let descrip = data["weather"]["0"]["description"];
+      let tempature = data["main"]["temp"];
+      let wndspd = data["wind"]["speed"];
+      let rise = data["sys"]["sunrise"];
+      let set = data["sys"]["sunset"];
+
+      city.innerHTML = `Weather of <span>${nameval}<span>`;
+      temp.innerHTML = `Temperature: <span>${toCelsius(tempature)} C</span>`;
+      description.innerHTML = `Sky Conditions: <span>${descrip}<span>`;
+      wind.innerHTML = `Wind Speed: <span>${wndspd} km/h<span>`;
+      sunRise.innerHTML = `Sun rise: <span.${rise}</span>`;
+      sunSet.innerHTML = `Sun set: <span.${set}</span>`;
+    }
 
 function getData() {
   city = input.Value;
-  fetch('https://api.openweathermap.org/data/2.5/weather?q='+city+' '&appid='apik')
+  fetch('https://api.openweathermap.org/data/2.5/weather?q='+city+'&appid='+apik)
       .then(response => response.json())
     .then(data => renderData(data))
   .catch(err => alert('Wrong city'))
 
 }
+btn.addEventListener('click', function () {
+  city = inputValue;
+  fetch(
+    'https://api.openweathermap.org/data/2.5/weather?q=' +
+      inputval.value +
+      "&appid=" +
+      apik
+  )
+    .then(res => res.json())
+    .then((data) => renderData(data))
+
+    .catch((err) => alert("You entered Wrong city name"));
+});
+
 
 // fetch metode
 // fetch('https://api.openweathermap.org/data/2.5/weather?q='+inputval.value+'&appid='+apik)

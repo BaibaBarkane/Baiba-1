@@ -1,4 +1,4 @@
-// local variables:
+// Tiek definēti mainīgie
 
 const inputval = document.querySelector("#cityinput");
 const btn = document.querySelector("#add");

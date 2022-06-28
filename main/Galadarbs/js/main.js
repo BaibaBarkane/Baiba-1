@@ -6,8 +6,6 @@ let city = document.querySelector("#cityoutput");
 let descrip = document.querySelector("#description");
 let temp = document.querySelector("#temp");
 let wind = document.querySelector("#wind");
-// let sunRise = document.querySelector("#sunrise");
-// let sunSet = document.querySelector("#sunset");
 
 let apik = "3045dd712ffe6e702e3245525ac7fa38";
 

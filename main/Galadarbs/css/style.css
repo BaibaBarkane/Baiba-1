@@ -71,24 +71,24 @@ body {
 .wrapper h2 {
   padding: 5px 0;
   text-align: center;
-  background: #0548b5;
+  background: rgb(226, 150, 45);
   color: white;
+  font-size: 17px;
   font-family: sans-serif;
 }
 .wrapper p {
   margin: 20px 50px;
   margin-right: 20px;
   text-align: left;
-  color: #04214c;
-  font-size: 23px;
+  color: rgb(226, 150, 45);
+  font-size: 17px;
 }
 
 .wrapper h2 span {
-  font-size: 26px;
-  color: #9beefb;
+  font-size: 17px;
+  color: #3a3b3a;
 }
-
 .wrapper p span {
-  color: #90006e;
-  font-size: 25px;
+  color: #3a3b3a;
+  font-size: 17px;
 }

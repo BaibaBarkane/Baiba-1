@@ -7,7 +7,7 @@ let descrip = document.querySelector("#description");
 let temp = document.querySelector("#temp");
 let wind = document.querySelector("#wind");
 
-apik = "3045dd712ffe6e702e3245525ac7fa38";
+let apik = "3045dd712ffe6e702e3245525ac7fa38";
 
 //Funkcija, kas pārvērš Kelvinus Celsija grādos
 
@@ -17,7 +17,6 @@ function toCelsius(val) {
 // Pēc Submit taustiņa nospiešanas ar fetch metodi iegūstam informāciju no api
 
 btn.addEventListener("click", function () {
-
   fetch(
     "https://api.openweathermap.org/data/2.5/weather?q=" +
       inputval.value +
@@ -26,9 +25,8 @@ btn.addEventListener("click", function () {
   )
     .then((res) => res.json())
     .then((data) => {
+      //Iegūto informāciju saglabājam mainīgajos
 
-//Iegūto informāciju saglabājam mainīgajos
-      
       let nameval = data["name"];
       let descrip = data["weather"]["0"]["description"];
       let temperature = data["main"]["temp"];
@@ -40,10 +38,9 @@ btn.addEventListener("click", function () {
       temp.innerHTML = `Temperature: <span>${toCelsius(temperature)} C</span>`;
       description.innerHTML = `Sky Conditions: <span>${descrip}<span>`;
       wind.innerHTML = `Wind Speed: <span>${wndspd} km/h<span>`;
-    });
+    })
 
-  //Ja pieprasītā pilsēta nav atrodama, izvadām kļūdas paziņojumu
+    //Ja pilsēta nav atrodama, vai ievadīta kļūdaini, izvadām paziņojumu
 
-      .catch ((err) => alert("Wrong city name"));
+    .catch((err) => alert("You entered Wrong city name"));
 });
-

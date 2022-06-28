@@ -36,8 +36,8 @@ btn.addEventListener("click", function () {
       let rise = data["sys"]["sunrise"];
       let set = data["sys"]["sunset"];
 
-      let sunriseGMT = new Date(sunrise * 1000);
-      let sunsetGMT = new Date(sunset * 1000);
+      let sunriseGMT = new Date(rise * 1000);
+      let sunsetGMT = new Date(set * 1000);
 
       //Izmantojot innerHTML, izvadām iegūto informāciju
 
@@ -45,6 +45,7 @@ btn.addEventListener("click", function () {
       temp.innerHTML = `Temperature: <span>${toCelsius(temperature)} C</span>`;
       description.innerHTML = `Sky Conditions: <span>${descrip}<span>`;
       wind.innerHTML = `Wind Speed: <span>${wndspd} km/h<span>`;
+
       sunrise.innerHTML = `Sunrise: ${sunriseGMT.toLocaleDateString()}, ${sunriseGMT.toLocaleTimeString()}`;
       sunset.textContent = `Sunset: ${sunsetGMT.toLocaleDateString()}, ${sunsetGMT.toLocaleTimeString()}`;
     })

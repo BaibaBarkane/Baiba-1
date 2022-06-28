@@ -34,13 +34,18 @@ btn.addEventListener("click", function () {
       let descrip = data["weather"]["0"]["description"];
       let temperature = data["main"]["temp"];
       let wndspd = data["wind"]["speed"];
+      let rise = data["sys"]["sunrise"];
+      let set = data["sys"]["sunset"];
 
       //Izmantojot innerHTML izvadām iegūto informāciju
 
       city.innerHTML = `Weather of <span>${nameval}<span>`;
       temp.innerHTML = `Temperature: <span>${toCelsius(temperature)} C</span>`;
+      temp.innerHTML = `Temperature: ${data.main.temp} C`;
       description.innerHTML = `Sky Conditions: <span>${descrip}<span>`;
       wind.innerHTML = `Wind Speed: <span>${wndspd} km/h<span>`;
+      sunRise.innerHTML = `Sunrise: <span.${rise}</span>`;
+      sunSet.innerHTML = `Sunset: <span.${set}</span>`;
     })
 
     //Ja pieprasītā pilsēta nav atrodama, izvadām kļūdas paziņojumu

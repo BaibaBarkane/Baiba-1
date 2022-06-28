@@ -44,8 +44,8 @@ btn.addEventListener("click", function () {
       wind.innerHTML = `Wind Speed: <span>${wndspd} km/h<span>`;
       sunRise.innerHTML = `Sunrise: <span.${rise}</span>`;
       sunSet.innerHTML = `Sunset: <span.${set}</span>`;
-      sunrise.textContent = `${sunriseGMT.toLocaleDateString()}, ${sunriseGMT.toLocaleTimeString()}`;
-      sunset.textContent = `${sunsetGMT.toLocaleDateString()}, ${sunsetGMT.toLocaleTimeString()}`;
+      sunrise.innerHTML = `Sunrise: ${sunriseGMT.toLocaleDateString()}, ${sunriseGMT.toLocaleTimeString()}`;
+      sunset.textContent = `Sunset: ${sunsetGMT.toLocaleDateString()}, ${sunsetGMT.toLocaleTimeString()}`;
     })
 
     //Ja pilsēta nav atrodama, vai ievadīta kļūdaini, izvadām paziņojumu

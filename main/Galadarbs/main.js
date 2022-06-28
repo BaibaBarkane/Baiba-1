@@ -36,6 +36,8 @@ btn.addEventListener("click", function () {
       let rise = data["sys"]["sunrise"];
       let set = data["sys"]["sunset"];
 
+      //Pārveido Epoch(Unix)laiku uz GMT
+
       let sunriseGMT = new Date(rise * 1000);
       let sunsetGMT = new Date(set * 1000);
 
@@ -43,11 +45,11 @@ btn.addEventListener("click", function () {
 
       city.innerHTML = `Weather of <span>${nameval}<span>`;
       temp.innerHTML = `Temperature: <span>${toCelsius(temperature)} C</span>`;
-      description.innerHTML = `Sky Conditions: <span>${descrip}<span>`;
+      description.innerHTML = `Sky Conditions: <span>${descrip}</span>`;
       wind.innerHTML = `Wind Speed: <span>${wndspd} km/h<span>`;
 
-      sunrise.innerHTML = `Sunrise: ${sunriseGMT.toLocaleDateString()}, ${sunriseGMT.toLocaleTimeString()}`;
-      sunset.textContent = `Sunset: ${sunsetGMT.toLocaleDateString()}, ${sunsetGMT.toLocaleTimeString()}`;
+      sunrise.innerHTML = `Sunrise:  <span>${sunriseGMT.toLocaleDateString()}, ${sunriseGMT.toLocaleTimeString()}</span>`;
+      sunset.innerHTML = `Sunset:  <span>${sunsetGMT.toLocaleDateString()}, ${sunsetGMT.toLocaleTimeString()}</span>`;
     })
 
     //Ja pilsēta nav atrodama, vai ievadīta kļūdaini, izvadām paziņojumu

@@ -35,7 +35,7 @@ btn.addEventListener("click", function () {
       let temperature = data["main"]["temp"];
       let wndspd = data["wind"]["speed"];
 
-      //Izmantojot innerHTML izvadām iegūto informāciju
+      //Izmantojot innerHTML, izvadām iegūto informāciju
 
       city.innerHTML = `Weather of <span>${nameval}<span>`;
       temp.innerHTML = `Temperature: <span>${toCelsius(temperature)} C</span>`;

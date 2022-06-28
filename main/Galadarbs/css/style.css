@@ -73,6 +73,7 @@ body {
   text-align: center;
   background: rgb(226, 150, 45);
   color: white;
+  font-size: 19px;
   font-family: sans-serif;
 }
 .wrapper p {
@@ -80,14 +81,14 @@ body {
   margin-right: 20px;
   text-align: left;
   color: rgb(226, 150, 45);
-  font-size: 17px;
+  font-size: 19px;
 }
 
 .wrapper h2 span {
-  font-size: 20px;
+  font-size: 19px;
   color: #3a3b3a;
 }
 .wrapper p span {
   color: #3a3b3a;
-  font-size: 17px;
+  font-size: 19px;
 }

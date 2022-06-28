@@ -31,10 +31,10 @@ btn.addEventListener("click", function () {
     .then((data) => {
       //Now you need to collect the necessary information with the API link. Now I will collect that information and store it in different constants.
 
-      var nameval = data["name"];
-      var descrip = data["weather"]["0"]["description"];
-      var temperature = data["main"]["temp"];
-      var wndspd = data["wind"]["speed"];
+      let nameval = data["name"];
+      let descrip = data["weather"]["0"]["description"];
+      let temperature = data["main"]["temp"];
+      let wndspd = data["wind"]["speed"];
       //Now with the help of innerHTML you have to make arrangements to display all the information in the webpage.
       city.innerHTML = `Weather of <span>${nameval}<span>`;
       temp.innerHTML = `Temperature: <span>${toCelsius(temperature)} C</span>`;

@@ -43,8 +43,8 @@ btn.addEventListener("click", function () {
       temp.innerHTML = "Temperature: ${(data.main.temp)} C";
       description.innerHTML = `Sky Conditions: <span>${descrip}<span>`;
       wind.innerHTML = `Wind Speed: <span>${wndspd} km/h<span>`;
-      sunRise.innerHTML = `Sun rise: <span.${rise}</span>`;
-      sunSet.innerHTML = `Sun set: <span.${set}</span>`;
+      sunRise.innerHTML = `Sunrise: <span.${rise}</span>`;
+      sunSet.innerHTML = `Sunset: <span.${set}</span>`;
     })
     .catch((err) => alert("You entered wrong city name"));
 });

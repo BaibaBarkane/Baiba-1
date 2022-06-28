@@ -73,22 +73,25 @@ body {
   text-align: center;
   background: rgb(226, 150, 45);
   color: white;
-  font-size: 17px;
+  font-size: 19px;
   font-family: sans-serif;
 }
 .wrapper p {
   margin: 20px 50px;
   margin-right: 20px;
-  text-align: left;
+  text-align: center;
   color: rgb(226, 150, 45);
-  font-size: 17px;
+  font-size: 19px;
+  font-family: sans-serif;
 }
 
 .wrapper h2 span {
-  font-size: 17px;
+  font-size: 19px;
   color: #3a3b3a;
+  font-family: sans-serif;
 }
 .wrapper p span {
   color: #3a3b3a;
-  font-size: 17px;
+  font-size: 19px;
+  font-family: sans-serif;
 }

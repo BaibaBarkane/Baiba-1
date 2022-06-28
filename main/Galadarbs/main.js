@@ -36,19 +36,20 @@ btn.addEventListener("click", function () {
       let rise = data["sys"]["sunrise"];
       let set = data["sys"]["sunset"];
 
+      let sunriseGMT = new Date(sunrise * 1000);
+      let sunsetGMT = new Date(sunset * 1000);
+
       //Izmantojot innerHTML, izvadām iegūto informāciju
 
       city.innerHTML = `Weather of <span>${nameval}<span>`;
       temp.innerHTML = `Temperature: <span>${toCelsius(temperature)} C</span>`;
       description.innerHTML = `Sky Conditions: <span>${descrip}<span>`;
       wind.innerHTML = `Wind Speed: <span>${wndspd} km/h<span>`;
-      sunRise.innerHTML = `Sunrise: <span.${rise}</span>`;
-      sunSet.innerHTML = `Sunset: <span.${set}</span>`;
       sunrise.innerHTML = `Sunrise: ${sunriseGMT.toLocaleDateString()}, ${sunriseGMT.toLocaleTimeString()}`;
       sunset.textContent = `Sunset: ${sunsetGMT.toLocaleDateString()}, ${sunsetGMT.toLocaleTimeString()}`;
     })
 
     //Ja pilsēta nav atrodama, vai ievadīta kļūdaini, izvadām paziņojumu
 
-    .catch((err) => alert("You entered Wrong city name"));
+    .catch((err) => alert("Wrong city name"));
 });

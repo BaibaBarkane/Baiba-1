@@ -1,9 +1,9 @@
 // Tiek definēti mainīgie
 
-let inputval = document.getElementById("cityinput");
-let btn = document.getElementById("add");
-let city = document.getElementById("cityoutput");
-let descrip = document.getElementById("description");
+let inputval = document.querySelector("#cityinput");
+let btn = document.querySelector("#add");
+let city = document.querySelector("#cityoutput");
+let descrip = document.querySelector("#description");
 let temp = document.getElementById("temp");
 let wind = document.getElementById("wind");
 let sunRise = document.getElementById("sunrise");

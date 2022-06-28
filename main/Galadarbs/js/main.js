@@ -41,7 +41,12 @@ btn.addEventListener("click", function () {
       temp.innerHTML = `Temperature: <span>${toCelsius(temperature)} C</span>`;
       description.innerHTML = `Sky Conditions: <span>${descrip}<span>`;
       wind.innerHTML = `Wind Speed: <span>${wndspd} km/h<span>`;
-    })
+    });
+
+  city.innerHTML = `Weather of <span>${nameval}<span>`;
+  temp.innerHTML = `Temperature: <span>${convertion(tempature)} C</span>`;
+  description.innerHTML = `Sky Conditions: <span>${descrip}<span>`;
+  wind.innerHTML = `Wind Speed: <span>${wndspd} km/h<span>`
 
     //Ja pieprasītā pilsēta nav atrodama, izvadām kļūdas paziņojumu
 
